@@ -1,0 +1,101 @@
+\newcommand{\CLASSINPUTtoptextmargin}{0.75in}
+\newcommand{\CLASSINPUTbottomtextmargin}{0.75in}
+\newcommand{\CLASSINPUTinnersidemargin}{0.75in}
+\newcommand{\CLASSINPUToutersidemargin}{0.75in}
+\documentclass[letterpaper,conference,10pt]{ieeetran}
+\IEEEoverridecommandlockouts
+\overrideIEEEmargins
+\pdfoptionpdfminorversion=4
+%\usepackage[sc]{mathpazo}
+%\linespread{1.02}         % Palatino needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+
+
+\usepackage{multicol}
+% Insert hyperlinks in the document
+\usepackage{hyperref}
+\hypersetup{bookmarksopen,bookmarksnumbered,
+pdfpagemode=UseOutlines,
+colorlinks=true,
+linkcolor=blue,
+anchorcolor=blue,
+citecolor=blue,
+filecolor=blue,
+menucolor=blue,
+urlcolor=blue
+}
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{bm}
+%\usepackage{subcaption}
+\usepackage{flushend}
+\usepackage{dirtree}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage[sort]{natbib}
+\usepackage{fixltx2e}
+
+% Labels in IEEE format
+\newcommand{\eref}[1]{(\ref{#1})} % Equation
+\newcommand{\sref}[1]{Sec. \ref{#1}} % Section
+\newcommand{\figref}[1]{Fig.\ref{#1}} % Figure
+\newcommand{\tref}[1]{Table \ref{#1}} % Table
+
+
+
+% floats
+\usepackage[font=footnotesize]{caption} % incompatible with aaai.sty?
+%\usepackage[font=footnotesize]{subcaption}
+\usepackage{mathabx}
+\usepackage{verbatim}
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage[noend]{algpseudocode}
+
+
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[dvipsnames]{xcolor}
+
+\setlength{\textfloatsep}{5pt}
+\setlength{\intextsep}{5pt}
+
+\newcommand{\ssnote}[1]{{\xxnote{SS}{red}{#1}}}
+\newcommand{\scnote}[1]{{\xxnote{SC}{blue}{#1}}}
+\newcommand{\cdnote}[1]{{\xxnote{CD}{cyan}{#1}}}
+\newcommand{\xxnote}[3]{}
+\ifx\hidenotes\undefined
+ \usepackage{color}
+ \renewcommand{\xxnote}[3]{\color{#2}{#1: #3}}
+\fi
+
+\ifCLASSOPTIONcompsoc
+  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+  \usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+
+\begin{document}
+
+\title{\vspace{0.20in}\LARGE Title}
+
+\author{Pengju Jin, Siddhartha Srinivasa}
+\maketitle 	
+
+\begin{abstract}
+Abstract Goes here
+\end{abstract}
+
+\IEEEpeerreviewmaketitle
+
+\input{sections/introduction}
+
+\input{sections/related}
+
+\input{sections/approach}
+
+\footnotesize{
+\bibliographystyle{abbrv}
+\bibliography{bib/references}
+}
+\end{document}
+
