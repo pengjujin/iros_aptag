@@ -13,14 +13,24 @@ Therefore, we implemented a Bayesian plane fitting algorithm (describe the algor
 \subsection{Initial Pose Estimation}
 Once the plane is computed, we can estimate the pose of the tag. We project the noisy corners of the apriltag back onto the estimated plane to get their 3D coordinates in the camera frame. (Write out the formula) From here, the pose of the tag can be described as the homogenious transformation from the tag frame to the camera frame. We can solve for the transformation with a set of two 3D points correspondence: The 3D projected points of the tag in the camera frame and the 3D points in the tag frame. The points in the camera frame would be the projected corners which forms a $4X3$ matrix of homogeneous points denoted as $Pt_{obj}$. The points, $Pt_{tag}$ in the tag frame are the coordinate of the four corners measured from the center of the tag with depth of 0 because they are planar. 
 $$Pt_{obj} = H Pt_{tag}$$
-Since the projected points are no longer going to be a perfect square, we want to find the optimal transformation $H$ that minimizes the reprojection error. 
-This becomes a 3-D rigid body transformation estimation problem. In our implementation, we used SVD to compute the transformation.
+This becomes a 3-D rigid body transformation estimation problem. In our implementation:
 \begin{align*}
-Pt_{obj}'&=Pt_{obj} - centroid(Pt_{obj})\\
-Pt_{tag}'&=Pt_{tag} - centroid(Pt_{tag})\\
-H &= Pt_{obj}'^{T}   
+p &= mean(Pt_{obj})\\
+q &= mean(Pt_{tag})\\
+x &=Pt_{obj} - p\\
+y &=Pt_{tag} - q\\
+U, S, V^T &= \textbf{SVD}(x^T y)\\
+R &= VU^T \\
+t &= q-Rp 
 \end{align*}
-The pose obtained from the range data, although not extremely accurate, is consistent and does not suffer from the perceptual ambiguity problem. 
-
+$R$ and $t$ are the rotation and translation components of the the homogenous transform. When we projected the points onto the depth plane, the squares will likely deform. Therefore, we use the above algorithm to find the optimal transformation $H$ that minimizes the error in the least square sense. 
+The pose obtained from the range data, although not always accurate, is rconsistent under noise and does not suffer from the perceptual ambiguity problem. 
 \subsection{Pose Refinement}
-Given the initial pose estimate of the tag and the RGB image, we can refine the pose that minimizes the reprojection error. The challenge here is to determine the region which the initial pose estimate can be adjusted. If we unbound $\Delta R$ and $\Delta t$ the optimization, the solution might converge to a pose optimal for the reprojection error but far away from the true pose due to perceptual ambiguity. On the other hand, if we constrain the optimization too much, the final pose might not be far away from the true pose because of the inaccurate initial estimation. We recognize that the bound of on this optimization is related to the variance of the initial pose estimation. In one extreme, if there is no uncertainty in the depth camera and the range data are perfect, we don't need to further refine the pose of the tag. Similarly, if we don't have any depth information (uncertainty of the initial estimate is infinity), then the best we can do is find the pose solely based on the reprojection error which is the same as solving the unbounded optimization problem. Thererfore, this becomes a constrained optimization problem where the bound on the independent variables of $\Delta R$ and $\Delta t$ is proportional to the covariance of our estimated depth plane parameters. In our implementation, we used the trust-region algorithm to bound the optimization. The scaling threshold parameter is emperically tested to yield the best results for our robot. 
+Given the initial pose estimate of the tag and the RGB image, we can refine the pose that minimizes the reprojection error. Given camera model $K$, initial rotation and translation estimates $R_{init}$ and $t_{init}$
+\begin{align*}
+\hat{y} &= K[(R_{init} + \Delta R)x + (t_{init} + \Delta t)]\\
+&\underset{\Delta R, \Delta t}{\mathrm{min}} (y - \hat{y})\\
+&\text{subject to:} \\
+& |\Delta R| <= \Gamma_R, \; |\Delta t| <= \Gamma_t\\
+\end{align*}
+The challenge here is to determine the region $\Gamma_R$ and $\Gamma_t$ which the initial pose estimate can be adjusted. If we unbound $\Delta R$ and $\Delta t$ the optimization, the solution might converge to a pose optimal for the reprojection error but far away from the true pose due to perceptual ambiguity. On the other hand, if we constrain the optimization too much, the final pose might not be far away from the true pose because of the inaccurate initial estimation. We recognize that the bound of on this optimization is related to the variance of the initial pose estimation. In one extreme, if there is no uncertainty in the depth camera and the range data are perfect, we don't need to further refine the pose of the tag. Similarly, if we don't have any depth information (uncertainty of the initial estimate is infinity), then the best we can do is find the pose solely based on the reprojection error which is the same as solving the unbounded optimization problem. Thererfore, this becomes a constrained optimization problem where the bound on the independent variables of $\Delta R$ and $\Delta t$ is proportional to the covariance of our estimated depth plane parameters. In our implementation, we used the trust-region algorithm to bound the optimization. The scaling threshold parameter is emperically tested to yield the best results for our robot. 
