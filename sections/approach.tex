@@ -10,6 +10,13 @@ The raw range data retrieved from the Kinect One sensor are usually far from per
 
 Therefore, we implemented a Bayesian plane fitting algorithm (describe the algorithm below) which assumes some noise model of the data and computes the mean and covariance of the plane. The noise model we used is a Kinect specific noise model [reference], which increases with the axis rotation of the depth plane. Note that a higher covariance implies that we are more uncertain about our fitting plane.
 
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figs/depth_plane_fig}
+\caption{The fiducial tag plane captured by the depth sensor}
+\label{fig:calib}
+\end{figure}
+
 \subsection{Initial Pose Estimation}
 Once the plane is computed, we can estimate the pose of the tag. We project the noisy corners of the apriltag back onto the estimated plane to get their 3D coordinates in the camera frame. (Write out the formula) From here, the pose of the tag can be described as the homogenious transformation from the tag frame to the camera frame. We can solve for the transformation with a set of two 3D points correspondence: The 3D projected points of the tag in the camera frame and the 3D points in the tag frame. The points in the camera frame would be the projected corners which forms a $4X3$ matrix of homogeneous points denoted as $Pt_{obj}$. The points, $Pt_{tag}$ in the tag frame are the coordinate of the four corners measured from the center of the tag with depth of 0 because they are planar. 
 $$Pt_{obj} = H Pt_{tag}$$
