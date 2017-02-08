@@ -1,5 +1,12 @@
 % !TEX root = ../main.tex
 \section{Introduction}
 \label{sec:intro}
+Talk about Fiducial tags in general.
 
-Introduction
+In most robotic applications, it is important to be able to accurately and reliably calculate the pose of the fiducial tags. There has been large amounts of effort for improving the detection algorithm by making them faster and more accurate using the RGB images. These algorithm yield great results under ideal and simulated conditions. (Provide reference to specific studies). However, in real robotic application, these algorithms are often tested under various lighting and sensory noises. In these conditions, the fidicual tags suffers greatly from the perceptual ambiguity problem and makes the pose estimation difficult without additional information. In fact, we observe that the localization accuracy of the state of the art Apriltags is significantly worse at difficult view angles or when there are noise in the scene. 
+
+In this paper, we present an algorithm that take advantage of the RGBD sensor to accurately estimate the pose from a single tag under noisy conditions. There are few key features to this algorithm: 
+\begin{itemize}
+\item The algorithm is generalizable to all square based fiducial tags.
+\item The algorithm performs at worse as good as only using RGB images.
+\end{itemize}
