@@ -1,4 +1,7 @@
 % !TEX root = ../main.tex
-\section{Results}
+\section{Experimental Results}
 \label{sec:res}
-Results goes here
+The key problem we are trying to resolve is the localization accuracy of Apriltags in noisy real world situations. To do this, we measured the rotational and translation accuracy of the Apriltag under different viewing angles, distances, lighting conditions, and simulated noise levels. We placed a standard camera calibration chessboard fixed distance away from the testing Apriltag to compute the ground-truth pose for the tag. By using a large chessboard, we can detect the corners to a sub-pixel accuracy and compute accurate ground-truth poses unsusceptible to lighting and sensory noise.
+
+\subsection{Viewing Angle}
+The low localization accuracy caused by perceptual ambiguity of the Apriltags directly depends on the viewing angle of the tag.  
