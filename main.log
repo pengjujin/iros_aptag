@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.6)  14 FEB 2017 16:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.6)  14 FEB 2017 20:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,49 +1072,52 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-(./sections/related.tex) (./sections/problem.tex
-<figs/mismatch_tag.png, id=63, 282.05376pt x 221.82875pt>
+(./sections/related.tex) (./sections/problem.tex [1{/var/lib/texmf/fonts/map/pd
+ftex/updmap/pdftex.map}
+
+
+]
+<figs/mismatch_tag.png, id=72, 282.05376pt x 221.82875pt>
 File: figs/mismatch_tag.png Graphic file (type png)
 
 <use figs/mismatch_tag.png>
 Package pdftex.def Info: figs/mismatch_tag.png used on input line 9.
 (pdftex.def)             Requested size: 246.94499pt x 194.21812pt.
 
-<figs/perspective_fig.png, id=64, 666.49pt x 428.60126pt>
+<figs/perspective_fig.png, id=73, 666.49pt x 428.60126pt>
 File: figs/perspective_fig.png Graphic file (type png)
 
 <use figs/perspective_fig.png>
 Package pdftex.def Info: figs/perspective_fig.png used on input line 16.
 (pdftex.def)             Requested size: 246.94499pt x 158.80234pt.
-) (./sections/approach.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-}
-
-
-]
-<figs/depth_plane_fig.png, id=75, 528.2937pt x 364.2408pt>
+) (./sections/approach.tex
+<figs/depth_plane_fig.png, id=74, 528.2937pt x 364.2408pt>
 File: figs/depth_plane_fig.png Graphic file (type png)
 
 <use figs/depth_plane_fig.png>
 Package pdftex.def Info: figs/depth_plane_fig.png used on input line 15.
 (pdftex.def)             Requested size: 246.94499pt x 170.25948pt.
- [2 <./figs/mismatch_tag.png> <./figs/perspective_fig.png (PNG copy)> <./figs/d
-epth_plane_fig.png>]
-<figs/optimization_visualization_fig.png, id=89, 414.8298pt x 142.3719pt>
+ [2 <./figs/mismatch_tag.png> <./figs/perspective_fig.png (PNG copy)>]
+<figs/optimization_visualization_fig.png, id=84, 414.8298pt x 142.3719pt>
 File: figs/optimization_visualization_fig.png Graphic file (type png)
 
 <use figs/optimization_visualization_fig.png>
 Package pdftex.def Info: figs/optimization_visualization_fig.png used on input 
 line 38.
 (pdftex.def)             Requested size: 246.94499pt x 84.7525pt.
-) (./sections/results.tex
-<figs/viewing_angle_fig1.png, id=90, 639.38875pt x 551.05875pt>
+) (./sections/results.tex [3 <./figs/depth_plane_fig.png> <./figs/optimization_
+visualization_fig.png>]
+<figs/viewing_angle_fig1.png, id=97, 639.38875pt x 551.05875pt>
 File: figs/viewing_angle_fig1.png Graphic file (type png)
 
 <use figs/viewing_angle_fig1.png>
 Package pdftex.def Info: figs/viewing_angle_fig1.png used on input line 14.
 (pdftex.def)             Requested size: 246.94499pt x 212.82674pt.
- [3 <./figs/optimization_visualization_fig.png>] <figs/result_figs/rgb_frame000
-1.png, id=98, 963.6pt x 542.025pt>
+
+Underfull \vbox (badness 1325) has occurred while \output is active []
+
+
+<figs/result_figs/rgb_frame0001.png, id=98, 963.6pt x 542.025pt>
 File: figs/result_figs/rgb_frame0001.png Graphic file (type png)
 
 <use figs/result_figs/rgb_frame0001.png>
@@ -1162,7 +1165,11 @@ Package pdftex.def Info: figs/result_figs/result_0009.png used on input line 38
 .
 (pdftex.def)             Requested size: 246.94542pt x 170.63953pt.
 ) (./sections/discussion.tex)
-(./sections/conclusion.tex)
+(./sections/conclusion.tex [4 <./figs/viewing_angle_fig1.png>] [5 <./figs/resul
+t_figs/rgb_frame0001.png (PNG copy)> <./figs/result_figs/result_0001.png> <./fi
+gs/result_figs/rgb_frame0005.png (PNG copy)> <./figs/result_figs/result_0005.pn
+g> <./figs/result_figs/rgb_frame0009.png (PNG copy)> <./figs/result_figs/result
+_0009.png>])
 No file main.bbl.
 
 ** Conference Paper **
@@ -1176,17 +1183,17 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
-Extra height:0.0pt when 540.5281pt
-(2)Left:540.5281pt Right:534.42963pt Output:540.5281pt
+Extra height:12.0pt when 74.65744pt
+Extra height:0.0pt when 75.65744pt
+(2)Left:75.65744pt Right:74.16492pt Output:75.65744pt
 - LAST -
 Extra skip:0.0pt
-Left:540.5281pt
-Right:534.42963pt
-Output:540.5281pt
-[4 <./figs/viewing_angle_fig1.png>] [5 <./figs/result_figs/rgb_frame0001.png (P
-NG copy)> <./figs/result_figs/result_0001.png> <./figs/result_figs/rgb_frame000
-5.png (PNG copy)> <./figs/result_figs/result_0005.png> <./figs/result_figs/rgb_
-frame0009.png (PNG copy)> <./figs/result_figs/result_0009.png>]
+Left:75.65744pt
+Right:74.16492pt
+Output:75.65744pt
+[6
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
@@ -1200,9 +1207,9 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 10952 strings out of 493304
- 162265 string characters out of 6139872
- 271220 words of memory out of 5000000
+ 10953 strings out of 493304
+ 162271 string characters out of 6139872
+ 266220 words of memory out of 5000000
  14159 multiletter control sequences out of 15000+600000
  119483 words of font info for 153 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1218,9 +1225,9 @@ habx-type1/matha7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 2962631 bytes).
+Output written on main.pdf (6 pages, 2964569 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
+ 173 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
  176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,8 @@
 % !TEX root = ../main.tex
 \section{Related Work}
 \label{sec:related}
-
-Related work here
+	Although there are an abundance of fiducial markers in the computer vision and augmented reality field, most of them focus on detection and decoding using RGB images. They are typically designed with a specific binary pattern to encode information in the inner region. There are two large type of common tags, square tags and circle tags. 
+	
+	ARTags[], Aruco[], ARToolkit[], AprilTag[] and AprilTag 2[] are examples of squared based fiducial tags. The perspective projection of a square becomes a general quadrilateral which can be computed easily using any contour tracing algorithm. Given the scale of a single marker, the full 6-DOF pose can then be estimated using the corners of the quadrilateral. AprilTag and AprilTag2 both use a binary payload that guarantees a minimum Hamming distance between tags.  Recently AprilTag 2, built upon the origin Apriltag and ARTag system, also implemented a new boundary segmentation algorithm which gained significant computation speed. Therefore, the advantages of the square tags are that they can be located very efficiently and they have reliable decoding schemes. However, since they are detected using rectangles and lines, the accuracy of their corner point sub-pixel locations are limited. This downfall cause them to have poor pose estimation results under occlusion and image distortion.
+	
+	On the other hand, circular tags are created to encode the payload using small circles. The example or circular tags include Concentric Circle, Intersense and Rune tags. The perspective transformation of a circle is an ellipse, which can be used to directly compute the pose using back projection methods. The detection of circular features are more accurate to localize and thus generates better pose estimations. However, small circular features become hard to detect when they are far away from the camera and thus their effective range is smaller than that of square tags. Furthermore, Rune tags and Pi tags have significantly higher computation cost to decode their pay load. 
