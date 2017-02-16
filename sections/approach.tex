@@ -1,7 +1,11 @@
 % !TEX root = ../main.tex
 \section{Approach}
 \label{sec:approach}
-In order to obtain a reasonable and reliable pose estimation of the fiducial tag under noisy condition, we fused the RGBD data of the Kinect One sensor. Our system first uses the depth sensor data to calculate an initial pose estimation of the detected tag. Afterwards, we further refine the pose estimation by minimizing the reprojection error in the RGB image using a constrained optimization method. In this section, we describe how we obtain the initial pose estimation of the tag using depth sensor data and fuse it with RGB information to refine the pose. Our key insight is that we can constrain the pose refinement process by weighting the observations from both sensors with their uncertainty. In order words, we will weight the initial pose estimation more when the depth sensor is accurate otherwise we will allow the region of refinement to be bigger. 
+This section describes a method for estimating poses of noisy square fiducial tags using RGBD data. Unlike previous methods, the detected corners of the tag are treated as approximated locations of the true corners. Using the corners, the method implicitly evaluate the depth data and RGB data as two independent observations and fuse them in a meaningful way.
+
+There are three distinct components to this method. First, we find the plane in $SO(3)$ containing the tag using depth data. Second, an approximate pose is computed using the depth plane and the corners from tag detection. Finally, the method refines the initial pose using the RGB data. Each component is described in detail in the following subsections and illustrated in Fig. 
+ 
+The key insight to our method is that we should weight the observations in the pose estimation process by their uncertainty. For instance, if the initial pose estimation is precise, then 
 
 \subsection{Depth Plane Fitting}
 Since the fiducial tags are planar, we can obtain the pose the tag using a depth sensor by fitting a plane over the depth points. Although the corners of the fiducial tags found in the RGB images might be noisy, they are accurate enough to locate the region of the tag offset by at most a few pixels. With a calibrated RGBD sensor, we can extract the patch of depth points containing the planar tag. 
