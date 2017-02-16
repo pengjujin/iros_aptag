@@ -18,23 +18,23 @@ In implementation, we used a Bayesian plane fitting algorithm (describe the algo
 \end{figure}
 
 \subsection{Initial Pose Estimation}
-Once the plane is computed, we can estimate the pose of the tag. We project the noisy corners of the apriltag back onto the estimated plane to get their 3D coordinates in the camera frame. (Write out the formula) From here, the pose of the tag can be described as the homogenious transformation from the tag frame to the camera frame. We can solve for the transformation with a set of two 3D point correspondences: the projected points of the tag in the camera frame and the points in the tag frame. The points in the camera frame would be the projected corners which form a $4x3$ matrix of homogeneous points denoted as $Pt_{obj}$. The points, $Pt_{tag}$ in the tag frame are the coordinate of the four corners measured from the center of the tag with depth of 0 because they are planar. 
+Once the plane is computed, we can estimate the pose of the tag. We project the noisy corners of the apriltag back onto the estimated plane to get their 3D coordinates in the camera frame. (Write out the formula) From here, the pose of the tag can be described as the homogenious transformation from the tag frame to the camera frame. We can solve for the transformation with a set of two 3D point correspondences: the projected points of the tag in the camera frame and the points in the tag frame. The points in the camera frame would be the projected corners which form a $4x3$ matrix of homogeneous points denoted as $p_i$. The points, $q_i$ in the tag frame are the coordinate of the four corners measured from the center of the tag with depth of 0 because they are planar. We can formulate this to be a 3D rigid body transformation estimation problem [Reference to SVD 3D rigid body]. Solving for the optimal transformation $[R, \boldsymbol{t}]$ requires minimizing a least squares error objective function given by:
 \begin{IEEEeqnarray}{c}
-(R, \boldsymbol{t}) = \argmin _{R \in SO(3), \bolddymbol{t}\in \mathbb{R}^3} \sum_{i=1}^{n} w_i \| R \boldsymbol{p_i} + \boldsymbol{t} - \boldsymbol{q_i}\| ^2
+[R, \boldsymbol{t}] = \argmin _{R \in SO(3), \boldsymbol{t}\in \mathbb{R}^3} \sum_{i=1}^{n} w_i \| R \boldsymbol{p_i} + \boldsymbol{t} - \boldsymbol{q_i}\| ^2
 \IEEEeqnarraynumspace
-\label{eq:labelc1}
+\label{eq:rigid_body}
 \end{IEEEeqnarray}
-This becomes a 3-D rigid body transformation estimation problem. In our implementation:
-\begin{align*}
-p &= mean(Pt_{obj})\\
-q &= mean(Pt_{tag})\\
-x &=Pt_{obj} - p\\
-y &=Pt_{tag} - q\\
-U, S, V^T &= \textbf{SVD}(x^T y)\\
-R &= VU^T \\
-t &= q-Rp 
-\end{align*}
-$R$ and $t$ are the rotation and translation components of the the homogenous transform. When we projecte the points onto the depth plane, the squares will likely deform. Therefore, we use the above algorithm to find the optimal transformation $H$ that minimizes the error in the least square sense. 
+There are numerous approaches to solve Eq. \ref{eq:rigid_body}. Since we have very few correspondences and they are assumed to be correct, it can be computed quickly using SVD:
+\begin{IEEEeqnarray}{rCl}
+& \bar{p} = \frac{1}{N} \sum_{i=1}^{N} p_i \qquad p_{ci} = p_i - \bar{p} \\
+& \bar{q} = \frac{1}{N} \sum_{i=1}^{N} q_i \qquad q_{ci} = q_i - \bar{q} 
+\end{IEEEeqnarray}
+\begin{IEEEeqnarray}{rCl}
+p_{c}^{\top}q_c &= U\Sigma V^\top \\
+R & = VU^\top\\
+\boldsymbol{t} & = \bar{q} - R\bar{p}
+\end{IEEEeqnarray}
+$R$ and $t$ are the rotation and translation components of the the homogenous transform. When we project the points onto the depth plane, the squares will likely deform. Therefore, we use the above algorithm to find the optimal transformation $H$ that minimizes the error in the least square sense. 
 The pose obtained from the range data, although not always accurate, is consistent under noise and does not suffer from the perceptual ambiguity problem. 
 \subsection{Pose Refinement}
 \begin{figure}
