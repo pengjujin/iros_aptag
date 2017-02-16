@@ -4,7 +4,9 @@
 This section describes a method for estimating poses of noisy square fiducial tags using RGBD data. Unlike previous methods, the detected corners of the tag are treated as approximated locations of the true corners. Using the corners, the method implicitly evaluate the depth data and RGB data as two independent observations and fuse them in a meaningful way.
 
 There are three distinct components to this method. First, we find the plane in $SO(3)$ containing the tag using depth data. Second, an approximate pose is computed using the depth plane and the corners from tag detection. Finally, the method refines the initial pose using the RGB data. Each component is described in detail in the following subsections and illustrated in Fig. 
- 
+
+
+The key insight to our method is that it harness the different strength of RGB and depth information in the pose optimization process. The depth data produces less accurate estimation but more robust to noise. In contrast, RGB data 
 The key insight to our method is that we should weight the observations in the pose estimation process by their uncertainty. For instance, if the initial pose estimation is precise, then 
 
 \subsection{Depth Plane Fitting}
