@@ -15,6 +15,11 @@ For each captured data collection, we introduced 3 levels of Gaussian noise of $
 \caption{Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.}
 \end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{figs/distance_fig1}
+\end{figure}
+
 As the result shown in figure 7 indicates, the viewing angle has large effect on the rotation error. As we expected, the emperical results show a very clear bimodel distribution for the Apriltags at different viewing angles. The depth-sensor fused algorithm vastly outperforms the previous algorithm as it is not affected by the perceptual ambiguities. The small amount of the noise introduced to the data only cause a small rotational change around the true pose of the tag. In Figure[8], we thresholded all the poses based on their rotational errors and ploted the percentage of unacceptable poses at each viewing point. One interesting observation from the data is that, at most viewing angles, the magnitude of noise above a certain threshold has little effect on the locationlization accuracy. At most viewing angles, relatively small noises casuses a signficant accuracy decrease. 
 \subsection{Distance}
 In additional to the viewing angle, we caputred the images at different distances away from the camera. We moved the testing board perpendiualr to the sensor. 

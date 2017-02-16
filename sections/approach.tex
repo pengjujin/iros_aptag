@@ -18,8 +18,12 @@ In implementation, we used a Bayesian plane fitting algorithm (describe the algo
 \end{figure}
 
 \subsection{Initial Pose Estimation}
-Once the plane is computed, we can estimate the pose of the tag. We project the noisy corners of the apriltag back onto the estimated plane to get their 3D coordinates in the camera frame. (Write out the formula) From here, the pose of the tag can be described as the homogenious transformation from the tag frame to the camera frame. We can solve for the transformation with a set of two 3D point correspondences: the projected points of the tag in the camera frame and the points in the tag frame. The points in the camera frame would be the projected corners which form a $4X3$ matrix of homogeneous points denoted as $Pt_{obj}$. The points, $Pt_{tag}$ in the tag frame are the coordinate of the four corners measured from the center of the tag with depth of 0 because they are planar. 
-$$Pt_{obj} = H Pt_{tag}$$
+Once the plane is computed, we can estimate the pose of the tag. We project the noisy corners of the apriltag back onto the estimated plane to get their 3D coordinates in the camera frame. (Write out the formula) From here, the pose of the tag can be described as the homogenious transformation from the tag frame to the camera frame. We can solve for the transformation with a set of two 3D point correspondences: the projected points of the tag in the camera frame and the points in the tag frame. The points in the camera frame would be the projected corners which form a $4x3$ matrix of homogeneous points denoted as $Pt_{obj}$. The points, $Pt_{tag}$ in the tag frame are the coordinate of the four corners measured from the center of the tag with depth of 0 because they are planar. 
+\begin{IEEEeqnarray}{c}
+(R, \boldsymbol{t}) = \argmin _{R \in SO(3), \bolddymbol{t}\in \mathbb{R}^3} \sum_{i=1}^{n} w_i \| R \boldsymbol{p_i} + \boldsymbol{t} - \boldsymbol{q_i}\| ^2
+\IEEEeqnarraynumspace
+\label{eq:labelc1}
+\end{IEEEeqnarray}
 This becomes a 3-D rigid body transformation estimation problem. In our implementation:
 \begin{align*}
 p &= mean(Pt_{obj})\\
