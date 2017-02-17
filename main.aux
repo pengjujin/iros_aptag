@@ -30,10 +30,12 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Perspective Ambiguity illustrated with overlapping cubes\relax }}{2}{figure.caption.2}}
 \newlabel{fig:calib}{{2}{2}{Perspective Ambiguity illustrated with overlapping cubes\relax }{figure.caption.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Depth Plane Fitting}{2}{subsection.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Initial Pose Estimation}{2}{subsection.4.2}}
+\newlabel{eq:gaussian_noise}{{1}{2}{Depth Plane Fitting}{subsection.4.1}{}}
+\newlabel{eq:gaussian_noise}{{2}{2}{Depth Plane Fitting}{subsection.4.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The depth points of the Apriltag plane. The points are noisy but good for an approximate estimation.\relax }}{3}{figure.caption.3}}
-\newlabel{fig:calib}{{3}{3}{The depth points of the Apriltag plane. The points are noisy but good for an approximate estimation.\relax }{figure.caption.3}{}}
-\newlabel{eq:rigid_body}{{1}{3}{Initial Pose Estimation}{subsection.4.2}{}}
+\newlabel{fig:depth_data}{{3}{3}{The depth points of the Apriltag plane. The points are noisy but good for an approximate estimation.\relax }{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Initial Pose Estimation}{3}{subsection.4.2}}
+\newlabel{eq:rigid_body}{{3}{3}{Initial Pose Estimation}{subsection.4.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces An abstract visualization of the optimization constraints. The blue curve is the initial pose estimation obtained from the depth plane. The red curves are the ambiguous poses from the RGB image. We constrained the region of optimization based on how well we fit the depth plane.\relax }}{3}{figure.caption.4}}
 \newlabel{fig:calib}{{4}{3}{An abstract visualization of the optimization constraints. The blue curve is the initial pose estimation obtained from the depth plane. The red curves are the ambiguous poses from the RGB image. We constrained the region of optimization based on how well we fit the depth plane.\relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Pose Refinement}{3}{subsection.4.3}}
@@ -41,33 +43,35 @@
 \newlabel{sec:res}{{V}{4}{Experimental Results}{section.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Viewing Angle}{4}{subsection.5.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.\relax }}{4}{figure.caption.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }}{4}{figure.caption.6}}
+\newlabel{fig:distance_result}{{6}{4}{Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }{figure.caption.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Distance}{4}{subsection.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Lighting}{4}{subsection.5.3}}
-\newlabel{RGB image}{{6a}{5}{Subfigure 6a}{subfigure.6.1}{}}
-\newlabel{sub@RGB image}{{(a)}{a}{Subfigure 6a\relax }{subfigure.6.1}{}}
-\newlabel{RGB image}{{6b}{5}{Subfigure 6b}{subfigure.6.2}{}}
-\newlabel{sub@RGB image}{{(b)}{b}{Subfigure 6b\relax }{subfigure.6.2}{}}
-\newlabel{RGB image}{{6c}{5}{Subfigure 6c}{subfigure.6.3}{}}
-\newlabel{sub@RGB image}{{(c)}{c}{Subfigure 6c\relax }{subfigure.6.3}{}}
-\newlabel{RGB image}{{6d}{5}{Subfigure 6d}{subfigure.6.4}{}}
-\newlabel{sub@RGB image}{{(d)}{d}{Subfigure 6d\relax }{subfigure.6.4}{}}
-\newlabel{RGB image}{{6e}{5}{Subfigure 6e}{subfigure.6.5}{}}
-\newlabel{sub@RGB image}{{(e)}{e}{Subfigure 6e\relax }{subfigure.6.5}{}}
-\newlabel{RGB image}{{6f}{5}{Subfigure 6f}{subfigure.6.6}{}}
-\newlabel{sub@RGB image}{{(f)}{f}{Subfigure 6f\relax }{subfigure.6.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The fiducial tag plane captured by the depth sensor\relax }}{5}{figure.caption.7}}
-\newlabel{fig:calib}{{6}{5}{The fiducial tag plane captured by the depth sensor\relax }{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {RGB Image at 75$^{\circ }$}}}{5}{subfigure.6.1}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Distrubtion}}}{5}{subfigure.6.2}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {RGB Image at 40$^{\circ }$}}}{5}{subfigure.6.3}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Close}}}{5}{subfigure.6.4}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {RGB Image at 5$^{\circ }$}}}{5}{subfigure.6.5}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {Close}}}{5}{subfigure.6.6}}
 \bibstyle{abbrv}
 \bibdata{bib/references}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Discussion}{6}{section.6}}
-\newlabel{sec:discussion}{{VI}{6}{Discussion}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Perceptual Uncertainty}{6}{subsection.6.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Computation Time}{6}{subsection.6.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{6}{section.7}}
-\newlabel{sec:conclusion}{{VII}{6}{Conclusion}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Lighting}{5}{subsection.5.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Discussion}{5}{section.6}}
+\newlabel{sec:discussion}{{VI}{5}{Discussion}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Perceptual Uncertainty}{5}{subsection.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Computation Time}{5}{subsection.6.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{5}{section.7}}
+\newlabel{sec:conclusion}{{VII}{5}{Conclusion}{section.7}{}}
+\newlabel{RGB image}{{7a}{6}{Subfigure 7a}{subfigure.7.1}{}}
+\newlabel{sub@RGB image}{{(a)}{a}{Subfigure 7a\relax }{subfigure.7.1}{}}
+\newlabel{RGB image}{{7b}{6}{Subfigure 7b}{subfigure.7.2}{}}
+\newlabel{sub@RGB image}{{(b)}{b}{Subfigure 7b\relax }{subfigure.7.2}{}}
+\newlabel{RGB image}{{7c}{6}{Subfigure 7c}{subfigure.7.3}{}}
+\newlabel{sub@RGB image}{{(c)}{c}{Subfigure 7c\relax }{subfigure.7.3}{}}
+\newlabel{RGB image}{{7d}{6}{Subfigure 7d}{subfigure.7.4}{}}
+\newlabel{sub@RGB image}{{(d)}{d}{Subfigure 7d\relax }{subfigure.7.4}{}}
+\newlabel{RGB image}{{7e}{6}{Subfigure 7e}{subfigure.7.5}{}}
+\newlabel{sub@RGB image}{{(e)}{e}{Subfigure 7e\relax }{subfigure.7.5}{}}
+\newlabel{RGB image}{{7f}{6}{Subfigure 7f}{subfigure.7.6}{}}
+\newlabel{sub@RGB image}{{(f)}{f}{Subfigure 7f\relax }{subfigure.7.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The fiducial tag plane captured by the depth sensor\relax }}{6}{figure.caption.7}}
+\newlabel{fig:calib}{{7}{6}{The fiducial tag plane captured by the depth sensor\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {RGB Image at 75$^{\circ }$}}}{6}{subfigure.7.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Distrubtion}}}{6}{subfigure.7.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {RGB Image at 40$^{\circ }$}}}{6}{subfigure.7.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Close}}}{6}{subfigure.7.4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {RGB Image at 5$^{\circ }$}}}{6}{subfigure.7.5}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {Close}}}{6}{subfigure.7.6}}

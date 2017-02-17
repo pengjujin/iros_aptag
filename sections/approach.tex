@@ -3,26 +3,41 @@
 \label{sec:approach}
 This section describes a method for estimating poses of noisy square fiducial tags using RGBD data. Unlike previous methods, the detected corners of the tag are treated as approximated locations of the true corners. Using the corners, the method implicitly evaluate the depth data and RGB data as two independent observations and fuse them in a meaningful way.
 
-There are three distinct components to this method. First, we find the plane in $SO(3)$ containing the tag using depth data. Second, an approximate pose is computed using the depth plane and the corners from tag detection. Finally, the method refines the initial pose using the RGB data. Each component is described in detail in the following subsections and illustrated in Fig. 
+There are three distinct components to this method. First, we find the plane in $SO(3)$ containing the tag using depth data. Secondly, an approximate pose is computed using the depth plane and the corners from tag detection. Finally, the method refines the initial pose using the RGB data. Each component is described in detail in the following subsections and illustrated in Fig. 
 
 \subsection{Depth Plane Fitting}
-Since the fiducial tags are planar, we can obtain the pose the tag using a depth sensor by fitting a plane over the depth points. Although the corners of the fiducial tags found in the RGB images might be noisy, they are accurate enough to locate the region of the tag offset by at most a few pixels. With a calibrated RGBD sensor, we can extract the patch of depth points containing the planar tag. 
+With a calibrated RGBD sensor, depth and RGB streams are registered to the same frame. The square patch of points in the depth image defined by the $g$ also contains the range information of the tag. Here we take advantage of the planar characteristic of the tag. By fitting a plane over the range data, we can constrain the pose of the tag to be on the plane.
 
-The raw range data retrieved from the Kinect One sensor are usually far from perfect for fitting an exact plane. Specifically, borders of the tag and some of the dark regions of the tag produce highly unreliable range data. Therefore, we first filter the data by removing points too far from the median before fitting the plane. Furthermore, the remaining points could have a large variance depending on the background lighting and the magnitude of the plane rotation. In the cases where depth sensor are noisy, we want to lower the weight of our initial pose estimate later in the pipeline. 
+The raw range data retrieved from the Kinect One sensor are usually noisy as illustrated by Figure \ref{fig:depth_data}. Specifically, borders of the tag and some of the dark regions of the tag produce highly unreliable range data. Therefore, we first filter the data by removing points too far from the median before fitting the plane. Nevertheless, the remaining points could have a large variance depending on the lighting condition and the magnitude of the plane rotation. The accuracy of the plane and tag pose is directly affected by the noise level of data. In fact, we want to characterize the uncertainty and weight the initial estimation accordingly during the fusing stage.
 
-In implementation, we used a Bayesian plane fitting algorithm (describe the algorithm below) which assumes some noise model of the data and computes the mean and covariance of the plane. The noise model we used is a Kinect specific noise model [reference], which increases with the axis rotation of the depth plane. Note that a higher covariance implies that we are more uncertain about our fitting plane.
+In implementation, we used a Bayesian plane fitting algorithm described in [Uncertainty Analysis] which computes the Hessian Normal parameters of a plane through optimizing
+\begin{IEEEeqnarray}{c}
+\min _{\boldsymbol{\hat{n}}, d} \sum_{j=1}^{N} 
+	\frac{(p_j(\boldsymbol{\hat{n}} \cdot \boldsymbol{\hat{m}_j}) -d)^2}
+		 {(\boldsymbol{\hat{n}} \cdot \boldsymbol{\hat{m}_j})^2\sigma ^2\{\bar{p}_j \} }
+\label{eq:gaussian_noise}
+\end{IEEEeqnarray}
+The algorithm in the paper assumes a radial Gaussian noise in the range data $p_j$ with the standard deviation modeled by a function in the form
+\begin{IEEEeqnarray}{c}
+\sigma \{ \bar{p_j} \} = \frac{kd^2}{ \| \boldsymbol{\hat{n}} \cdot \boldsymbol{\hat{m}_j} \| } 
+\IEEEeqnarraynumspace
+\label{eq:gaussian_noise}
+\end{IEEEeqnarray}
+where $\boldsymbol{\hat{n}}$ is the local normal to the planar surface of the depth point and $\boldsymbol{\hat{m_j}}$ is the measurement direction for the sensor for point $p_j$. The coefficient $k > 0$ is an estimated value obtained from sensor calibration. In our implementation, we obtained $k$ by simplified the results from [Kinect Noise Model paper]. 
+
+Another important result we used from [] is the covariance matrix for the plane-parameters. The covariance matrix is obtained by taking the \textit{Moore-Penrose generalized inverse} of Hessian matrix computed from the Lagrangian. The covariance characterizes the uncertainty of the plane and defines the refinement regions of the pose later in the pipeline. 
 
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{figs/depth_plane_fig}
 \caption{The depth points of the Apriltag plane. The points are noisy but good for an approximate estimation.}
-\label{fig:calib}
+\label{fig:depth_data}
 \end{figure}
 
 \subsection{Initial Pose Estimation}
-The pose of the tag can be described as the transformation from tag's frame to the sensory frame of the robot given by $[R, \boldsymbol{t}]$. However, the depth plane $D [ \boldsymbol{\hat{n}}, d]$ and alone is insufficient to determine the transformation because it defines only 3 DOF. Furthermore, the center of the tag must align with the center of the plane and it further constrain 2 DOF. However, there are still infinite number of valid poses rotating about the normal $\boldsymbol{\hat{n}}$. One solution is to further constrain the pose by using a corner as an extra point correspondence to solve for the optimal rotation. However, the accuracy of this method largely depends on the depth accuracy of the chosen corner point. 
+The pose of the tag can be described as the transformation from tag's frame to the sensory frame of the robot given by $[R, \boldsymbol{t}]$. However, the depth plane $D [ \boldsymbol{\hat{n}}, d]$ alone is insufficient to determine the transformation because it only defines 3 DOF in a 6 DOF space. Furthermore, the center of the tag must align with the center of the plane and thus further constrain 2 DOF. However, there are still infinite number of valid poses rotating about the normal $\boldsymbol{\hat{n}}$. One solution is to constrain the pose by using a corner as an extra point correspondence to solve for the optimal rotation. However, the accuracy of this method largely depends on the depth accuracy of the chosen corner point. 
 
-An alternative is to use all four detected corners as point correspondences for the optimization. We projected the detected corners onto $D [ \boldsymbol{\hat{n}}, d]$ to the coordinates, $p_i$, in the robot sensory frame. From here, the pose of the tag can be described as the homogenious transformation from the tag frame to the camera frame. We can solve for the transformation with a set of two 3D point correspondences: the projected points of the tag in the camera frame and the points in the tag frame. The points in the camera frame would be the projected corners which form a $4x3$ matrix of homogeneous points denoted as $p_i$. The points, $q_i$ in the tag frame are the coordinate of the four corners measured from the center of the tag with depth of 0 because they are planar. We can formulate this to be a 3D rigid body transformation estimation problem [Reference to SVD 3D rigid body]. Solving for the optimal transformation $[R, \boldsymbol{t}]$ requires minimizing a least squares error objective function given by:
+An alternative is to use all 4 detected corners as 4 pairs of point correspondences for the optimization. We projected the detected corners onto $D [ \boldsymbol{\hat{n}}, d]$ to get the coordinates $p = [p_1, p_2, p_3, p_4]$ in the robot sensory frame. The corner coordinates $q = [q_1, q_2, q_3, q_4]$ in the tag frame can be easily calculated since the tag is a square plane. We define the center of the tag as the origin, the corner coordinates are simply the location of the corners on a Cartesian plane. Given two sets of 3D point correspondences, this can be computed as a rigid body transformation estimation [Reference to SVD 3D rigid body]. Solving for the optimal transformation $[R, \boldsymbol{t}]$ requires minimizing a least squares error objective function given by:
 \begin{IEEEeqnarray}{c}
 [R, \boldsymbol{t}] = \argmin _{R \in SO(3), \boldsymbol{t}\in \mathbb{R}^3} \sum_{i=1}^{n} w_i \| R \boldsymbol{p_i} + \boldsymbol{t} - \boldsymbol{q_i}\| ^2
 \IEEEeqnarraynumspace
@@ -38,8 +53,8 @@ p_{c}^{\top}q_c &= U\Sigma V^\top \\
 R & = VU^\top\\
 \boldsymbol{t} & = \bar{q} - R\bar{p}
 \end{IEEEeqnarray}
-$R$ and $t$ are the rotation and translation components of the the homogenous transform. When we project the points onto the depth plane, the squares will likely deform. Therefore, we use the above algorithm to find the optimal transformation $H$ that minimizes the error in the least square sense. 
-The pose obtained from the range data, although not always accurate, is consistent under noise and does not suffer from the perceptual ambiguity problem. 
+$R$ and $t$ are the corresponding rotation and translation components of the the transformation. The above approach minimizes the least square error of the transformation and it is robust to small errors in the correspondences. The resulting pose obtained from the range data, although not accurate, is robust to noise and provide a good approximation for the true pose. 
+
 \subsection{Pose Refinement}
 \begin{figure}
 \centering
