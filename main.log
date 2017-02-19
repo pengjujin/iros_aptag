@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.28)  17 FEB 2017 01:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.6)  18 FEB 2017 23:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -947,9 +947,6 @@ LaTeX Warning: Label `RGB image' multiply defined.
 
 LaTeX Warning: Label `sub@RGB image' multiply defined.
 
-
-LaTeX Warning: Label `fig:calib' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -1111,65 +1108,76 @@ line 61.
 (pdftex.def)             Requested size: 246.94499pt x 84.7525pt.
  [3 <./figs/depth_plane_fig.png> <./figs/optimization_visualization_fig.png>]) 
 (./sections/results.tex
-<figs/viewing_angle_fig1.png, id=107, 639.38875pt x 551.05875pt>
+<figs/viewing_angle_fig1.png, id=109, 639.38875pt x 551.05875pt>
 File: figs/viewing_angle_fig1.png Graphic file (type png)
 
 <use figs/viewing_angle_fig1.png>
 Package pdftex.def Info: figs/viewing_angle_fig1.png used on input line 14.
 (pdftex.def)             Requested size: 246.94499pt x 212.82674pt.
 
-<figs/distance_fig1.png, id=108, 685.56125pt x 268.00125pt>
+<figs/distance_fig1.png, id=110, 685.56125pt x 268.00125pt>
 File: figs/distance_fig1.png Graphic file (type png)
 
 <use figs/distance_fig1.png>
-Package pdftex.def Info: figs/distance_fig1.png used on input line 20.
+Package pdftex.def Info: figs/distance_fig1.png used on input line 21.
 (pdftex.def)             Requested size: 246.94499pt x 96.53761pt.
- [4 <./figs/viewing_angle_fig1.png> <./figs/distance_fig1.png>] <figs/result_fi
-gs/rgb_frame0001.png, id=120, 963.6pt x 542.025pt>
+
+<figs/lighting_fig1.png, id=111, 526.21594pt x 334.24875pt>
+File: figs/lighting_fig1.png Graphic file (type png)
+
+<use figs/lighting_fig1.png>
+Package pdftex.def Info: figs/lighting_fig1.png used on input line 28.
+(pdftex.def)             Requested size: 246.94499pt x 156.85721pt.
+
+Underfull \vbox (badness 1028) has occurred while \output is active []
+
+ [4 <./figs/viewing_angle_fig1.png> <./figs/distance_fig1.png> <./figs/lighting
+_fig1.png (PNG copy)>] <figs/result_figs/rgb_frame0001.png, id=126, 963.6pt x 5
+42.025pt>
 File: figs/result_figs/rgb_frame0001.png Graphic file (type png)
 
 <use figs/result_figs/rgb_frame0001.png>
 Package pdftex.def Info: figs/result_figs/rgb_frame0001.png used on input line 
-40.
+49.
 (pdftex.def)             Requested size: 246.94247pt x 160.59898pt.
 
-<figs/result_figs/result_0001.png, id=121, 578.16pt x 433.62pt>
+<figs/result_figs/result_0001.png, id=127, 578.16pt x 433.62pt>
 File: figs/result_figs/result_0001.png Graphic file (type png)
 
 <use figs/result_figs/result_0001.png>
-Package pdftex.def Info: figs/result_figs/result_0001.png used on input line 41
+Package pdftex.def Info: figs/result_figs/result_0001.png used on input line 50
 .
 (pdftex.def)             Requested size: 246.94542pt x 170.63953pt.
 
-<figs/result_figs/rgb_frame0005.png, id=122, 963.6pt x 542.025pt>
+<figs/result_figs/rgb_frame0005.png, id=128, 963.6pt x 542.025pt>
 File: figs/result_figs/rgb_frame0005.png Graphic file (type png)
 
 <use figs/result_figs/rgb_frame0005.png>
 Package pdftex.def Info: figs/result_figs/rgb_frame0005.png used on input line 
-43.
+52.
 (pdftex.def)             Requested size: 246.94247pt x 160.59898pt.
 
-<figs/result_figs/result_0005.png, id=123, 578.16pt x 433.62pt>
+<figs/result_figs/result_0005.png, id=129, 578.16pt x 433.62pt>
 File: figs/result_figs/result_0005.png Graphic file (type png)
 
 <use figs/result_figs/result_0005.png>
-Package pdftex.def Info: figs/result_figs/result_0005.png used on input line 44
+Package pdftex.def Info: figs/result_figs/result_0005.png used on input line 53
 .
 (pdftex.def)             Requested size: 246.94542pt x 170.63953pt.
 
-<figs/result_figs/rgb_frame0009.png, id=124, 963.6pt x 542.025pt>
+<figs/result_figs/rgb_frame0009.png, id=130, 963.6pt x 542.025pt>
 File: figs/result_figs/rgb_frame0009.png Graphic file (type png)
 
 <use figs/result_figs/rgb_frame0009.png>
 Package pdftex.def Info: figs/result_figs/rgb_frame0009.png used on input line 
-46.
+55.
 (pdftex.def)             Requested size: 246.94247pt x 160.59898pt.
 
-<figs/result_figs/result_0009.png, id=125, 578.16pt x 433.62pt>
+<figs/result_figs/result_0009.png, id=131, 578.16pt x 433.62pt>
 File: figs/result_figs/result_0009.png Graphic file (type png)
 
 <use figs/result_figs/result_0009.png>
-Package pdftex.def Info: figs/result_figs/result_0009.png used on input line 47
+Package pdftex.def Info: figs/result_figs/result_0009.png used on input line 56
 .
 (pdftex.def)             Requested size: 246.94542pt x 170.63953pt.
 ) (./sections/discussion.tex)
@@ -1187,14 +1195,13 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
-Extra height:0.0pt when 443.53976pt
-(2)Left:443.53976pt Right:444.1297pt Output:443.53976pt
-(2)Left:444.1297pt Right:444.1297pt Output:444.1297pt
+Extra height:0.0pt when 544.48973pt
+(2)Left:544.48973pt Right:534.42963pt Output:544.48973pt
 - LAST -
 Extra skip:0.0pt
-Left:444.1297pt
-Right:444.1297pt
-Output:444.1297pt
+Left:544.48973pt
+Right:534.42963pt
+Output:544.48973pt
 [5] [6 <./figs/result_figs/rgb_frame0001.png (PNG copy)> <./figs/result_figs/re
 sult_0001.png> <./figs/result_figs/rgb_frame0005.png (PNG copy)> <./figs/result
 _figs/result_0005.png> <./figs/result_figs/rgb_frame0009.png (PNG copy)> <./fig
@@ -1212,10 +1219,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
- 10964 strings out of 493304
- 162489 string characters out of 6139871
- 271580 words of memory out of 5000000
- 14169 multiletter control sequences out of 15000+600000
+ 10973 strings out of 493304
+ 162685 string characters out of 6139872
+ 276239 words of memory out of 5000000
+ 14176 multiletter control sequences out of 15000+600000
  118376 words of font info for 152 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  36i,11n,47p,1477b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1238,9 +1245,9 @@ e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on main.pdf (6 pages, 3035539 bytes).
+Output written on main.pdf (6 pages, 3048147 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
