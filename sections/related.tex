@@ -1,7 +1,8 @@
 % !TEX root = ../main.tex
 \section{Related Work}
 \label{sec:related}
-	Although there are an abundance of fiducial markers in the computer vision and augmented reality field, most of them focus on detection and decoding using RGB images. They are typically designed with a specific binary pattern to encode information in the inner region. There are two large type of common tags, square tags and circle tags. 
+	Although there are an abundance of fiducial markers, most of them focus on detection and decoding tags using RGB data. The strength of using RGB data is obvious, the color information makes the pattern detection process much simpler.     
+	They are typically designed with a specific binary pattern to encode information in the inner region. There are two large type of common tags: square tags and circle tags. 
 	
 	ARTags[], Aruco[], ARToolkit[], AprilTag[] and AprilTag 2[] are examples of squared based fiducial tags. The perspective projection of a square becomes a general quadrilateral which can be computed easily using any contour tracing algorithm. Given the scale of a single marker, the full 6-DOF pose can then be estimated using the corners of the quadrilateral. AprilTag and AprilTag2 both use a binary payload that guarantees a minimum Hamming distance between tags.  Recently AprilTag 2, built upon the origin Apriltag and ARTag system, also implemented a new boundary segmentation algorithm which gained significant computation speed. Therefore, the advantages of the square tags are that they can be located very efficiently and they have reliable decoding schemes. However, since they are detected using rectangles and lines, the accuracy of their corner point sub-pixel locations are limited. This downfall cause them to have poor pose estimation results under occlusion and image distortion.
 	
