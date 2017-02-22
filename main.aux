@@ -23,61 +23,70 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Apriltag used to localize objects in mainpulation tasks\relax }}{1}{figure.caption.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{1}{section.2}}
 \newlabel{sec:related}{{II}{1}{Related Work}{section.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Different types of popular fiducial tags. ARToolkit, ARTags, and AprilTags are square tags with black borders. RUNE-tags and Intersense use different circle features as landmarks\relax }}{2}{figure.caption.2}}
+\newlabel{fig:exp_setup}{{2}{2}{Different types of popular fiducial tags. ARToolkit, ARTags, and AprilTags are square tags with black borders. RUNE-tags and Intersense use different circle features as landmarks\relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {ARToolkit}}}{2}{subfigure.2.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {ARTag}}}{2}{subfigure.2.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {AprilTag}}}{2}{subfigure.2.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {RUNE-Tag}}}{2}{subfigure.2.4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {Intersense}}}{2}{subfigure.2.5}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Challenges}{2}{section.3}}
 \newlabel{sec:problem}{{III}{2}{Challenges}{section.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The orientation of Apriltag placed on the object is greatly misaligned with the actual object\relax }}{2}{figure.caption.2}}
-\newlabel{fig:mismatch}{{2}{2}{The orientation of Apriltag placed on the object is greatly misaligned with the actual object\relax }{figure.caption.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Perspective Ambiguity illustrated with overlapping cubes\relax }}{2}{figure.caption.3}}
-\newlabel{fig:cube}{{3}{2}{Perspective Ambiguity illustrated with overlapping cubes\relax }{figure.caption.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Approach}{2}{section.4}}
 \newlabel{sec:approach}{{IV}{2}{Approach}{section.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The orientation of Apriltag placed on the object is greatly misaligned with the actual object, making the robot nearly impossible to grab it\relax }}{3}{figure.caption.3}}
+\newlabel{fig:mismatch}{{3}{3}{The orientation of Apriltag placed on the object is greatly misaligned with the actual object, making the robot nearly impossible to grab it\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Perspective Ambiguity illustrated with two overlapping cubes. The red square is a simulated projection of a tag and the orientation of the square is \relax }}{3}{figure.caption.4}}
+\newlabel{fig:cube}{{4}{3}{Perspective Ambiguity illustrated with two overlapping cubes. The red square is a simulated projection of a tag and the orientation of the square is \relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Depth Plane Fitting}{3}{subsection.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The depth points of the Apriltag plane. The points are noisy but good for an approximate estimation.\relax }}{3}{figure.caption.5}}
+\newlabel{fig:depth_data}{{5}{3}{The depth points of the Apriltag plane. The points are noisy but good for an approximate estimation.\relax }{figure.caption.5}{}}
 \newlabel{eq:gaussian_noise}{{1}{3}{Depth Plane Fitting}{subsection.4.1}{}}
 \newlabel{eq:gaussian_noise}{{2}{3}{Depth Plane Fitting}{subsection.4.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Initial Pose Estimation}{3}{subsection.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The depth points of the Apriltag plane. The points are noisy but good for an approximate estimation.\relax }}{3}{figure.caption.4}}
-\newlabel{fig:depth_data}{{4}{3}{The depth points of the Apriltag plane. The points are noisy but good for an approximate estimation.\relax }{figure.caption.4}{}}
-\newlabel{eq:rigid_body}{{3}{3}{Initial Pose Estimation}{subsection.4.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces An abstract visualization of the optimization constraints. The blue curve is the initial pose estimation obtained from the depth plane. The red curves are the ambiguous poses from the RGB image. We constrained the region of optimization based on how well we fit the depth plane.\relax }}{4}{figure.caption.5}}
-\newlabel{fig:optimization}{{5}{4}{An abstract visualization of the optimization constraints. The blue curve is the initial pose estimation obtained from the depth plane. The red curves are the ambiguous poses from the RGB image. We constrained the region of optimization based on how well we fit the depth plane.\relax }{figure.caption.5}{}}
+\newlabel{eq:rigid_body}{{3}{4}{Initial Pose Estimation}{subsection.4.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Pose Refinement}{4}{subsection.4.3}}
-\newlabel{eq:refinement}{{14}{4}{Pose Refinement}{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces An abstract visualization of the optimization constraints. The blue curve is the initial pose estimation obtained from the depth plane. The red curves are the ambiguous poses from the RGB image. We constrained the region of optimization based on how well we fit the depth plane.\relax }}{4}{figure.caption.6}}
+\newlabel{fig:optimization}{{6}{4}{An abstract visualization of the optimization constraints. The blue curve is the initial pose estimation obtained from the depth plane. The red curves are the ambiguous poses from the RGB image. We constrained the region of optimization based on how well we fit the depth plane.\relax }{figure.caption.6}{}}
+\newlabel{eq:refinement}{{14}{4}{Pose Refinement}{figure.caption.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Experimental Results}{4}{section.5}}
 \newlabel{sec:res}{{V}{4}{Experimental Results}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Viewing Angle}{4}{subsection.5.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.\relax }}{5}{figure.caption.6}}
-\newlabel{fig:viewing_result}{{6}{5}{Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }}{5}{figure.caption.7}}
-\newlabel{fig:distance_result}{{7}{5}{Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Illumination vs Error Percentage. Data are captured at $65$ cm away from the camera at a $40$ degree angle.\relax }}{5}{figure.caption.8}}
-\newlabel{fig:lighting_result}{{8}{5}{Illumination vs Error Percentage. Data are captured at $65$ cm away from the camera at a $40$ degree angle.\relax }{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Viewing Angle}{5}{subsection.5.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Distance}{5}{subsection.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Lighting}{5}{subsection.5.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Discussion}{5}{section.6}}
-\newlabel{sec:discussion}{{VI}{5}{Discussion}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Perceptual Uncertainty}{5}{subsection.6.1}}
-\newlabel{RGB image}{{9a}{6}{Subfigure 9a}{subfigure.9.1}{}}
-\newlabel{sub@RGB image}{{(a)}{a}{Subfigure 9a\relax }{subfigure.9.1}{}}
-\newlabel{RGB image}{{9b}{6}{Subfigure 9b}{subfigure.9.2}{}}
-\newlabel{sub@RGB image}{{(b)}{b}{Subfigure 9b\relax }{subfigure.9.2}{}}
-\newlabel{RGB image}{{9c}{6}{Subfigure 9c}{subfigure.9.3}{}}
-\newlabel{sub@RGB image}{{(c)}{c}{Subfigure 9c\relax }{subfigure.9.3}{}}
-\newlabel{RGB image}{{9d}{6}{Subfigure 9d}{subfigure.9.4}{}}
-\newlabel{sub@RGB image}{{(d)}{d}{Subfigure 9d\relax }{subfigure.9.4}{}}
-\newlabel{RGB image}{{9e}{6}{Subfigure 9e}{subfigure.9.5}{}}
-\newlabel{sub@RGB image}{{(e)}{e}{Subfigure 9e\relax }{subfigure.9.5}{}}
-\newlabel{RGB image}{{9f}{6}{Subfigure 9f}{subfigure.9.6}{}}
-\newlabel{sub@RGB image}{{(f)}{f}{Subfigure 9f\relax }{subfigure.9.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The fiducial tag plane captured by the depth sensor\relax }}{6}{figure.caption.9}}
-\newlabel{fig:exp_setup}{{9}{6}{The fiducial tag plane captured by the depth sensor\relax }{figure.caption.9}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {RGB Image at 75$^{\circ }$}}}{6}{subfigure.9.1}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Distrubtion}}}{6}{subfigure.9.2}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {RGB Image at 40$^{\circ }$}}}{6}{subfigure.9.3}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Close}}}{6}{subfigure.9.4}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {RGB Image at 5$^{\circ }$}}}{6}{subfigure.9.5}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {Close}}}{6}{subfigure.9.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.\relax }}{5}{figure.caption.7}}
+\newlabel{fig:viewing_result}{{7}{5}{Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }}{5}{figure.caption.8}}
+\newlabel{fig:distance_result}{{8}{5}{Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Illumination vs Error Percentage. Data are captured at $65$ cm away from the camera at a $40$ degree angle.\relax }}{5}{figure.caption.9}}
+\newlabel{fig:lighting_result}{{9}{5}{Illumination vs Error Percentage. Data are captured at $65$ cm away from the camera at a $40$ degree angle.\relax }{figure.caption.9}{}}
 \bibstyle{abbrv}
 \bibdata{bib/references}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Computation Time}{7}{subsection.6.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{7}{section.7}}
-\newlabel{sec:conclusion}{{VII}{7}{Conclusion}{section.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Average pose errors compared with ar\_track\_alvar package.\relax }}{6}{figure.caption.10}}
+\newlabel{fig:alvartrack}{{10}{6}{Average pose errors compared with ar\_track\_alvar package.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Rotation Error}}}{6}{subfigure.10.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Translation Error}}}{6}{subfigure.10.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Lighting}{6}{subsection.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Benchmark Against ar\_track\_alvar}{6}{subsection.5.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-E}}Computation Time}{6}{subsection.5.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{6}{section.6}}
+\newlabel{sec:conclusion}{{VI}{6}{Conclusion}{section.6}{}}
+\newlabel{RGB image}{{11a}{7}{Subfigure 11a}{subfigure.11.1}{}}
+\newlabel{sub@RGB image}{{(a)}{a}{Subfigure 11a\relax }{subfigure.11.1}{}}
+\newlabel{RGB image}{{11b}{7}{Subfigure 11b}{subfigure.11.2}{}}
+\newlabel{sub@RGB image}{{(b)}{b}{Subfigure 11b\relax }{subfigure.11.2}{}}
+\newlabel{RGB image}{{11c}{7}{Subfigure 11c}{subfigure.11.3}{}}
+\newlabel{sub@RGB image}{{(c)}{c}{Subfigure 11c\relax }{subfigure.11.3}{}}
+\newlabel{RGB image}{{11d}{7}{Subfigure 11d}{subfigure.11.4}{}}
+\newlabel{sub@RGB image}{{(d)}{d}{Subfigure 11d\relax }{subfigure.11.4}{}}
+\newlabel{RGB image}{{11e}{7}{Subfigure 11e}{subfigure.11.5}{}}
+\newlabel{sub@RGB image}{{(e)}{e}{Subfigure 11e\relax }{subfigure.11.5}{}}
+\newlabel{RGB image}{{11f}{7}{Subfigure 11f}{subfigure.11.6}{}}
+\newlabel{sub@RGB image}{{(f)}{f}{Subfigure 11f\relax }{subfigure.11.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces The fiducial tag plane captured by the depth sensor\relax }}{7}{figure.caption.11}}
+\newlabel{fig:exp_setup}{{11}{7}{The fiducial tag plane captured by the depth sensor\relax }{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {RGB Image at 75$^{\circ }$}}}{7}{subfigure.11.1}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Distrubtion}}}{7}{subfigure.11.2}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {RGB Image at 40$^{\circ }$}}}{7}{subfigure.11.3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Close}}}{7}{subfigure.11.4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {RGB Image at 5$^{\circ }$}}}{7}{subfigure.11.5}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {Close}}}{7}{subfigure.11.6}}
