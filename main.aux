@@ -19,10 +19,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}}
 \newlabel{sec:intro}{{I}{1}{Introduction}{section.1}{}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:table_clearing}{{\caption@xref {fig:table_clearing}{ on input line 23}}{1}{Introduction}{figure.caption.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Apriltag used to localize objects in mainpulation tasks\relax }}{1}{figure.caption.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{1}{section.2}}
-\newlabel{sec:related}{{II}{1}{Related Work}{section.2}{}}
+\newlabel{fig:table_clearing}{{\caption@xref {fig:table_clearing}{ on input line 15}}{1}{Introduction}{figure.caption.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Apriltags are used to find groundtruth poses of different objects in manipulation tasks\relax }}{1}{figure.caption.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Different types of popular fiducial tags. ARToolkit, ARTags, and AprilTags are square tags with black borders. RUNE-tags and Intersense use different circle features as landmarks\relax }}{2}{figure.caption.2}}
 \newlabel{fig:exp_setup}{{2}{2}{Different types of popular fiducial tags. ARToolkit, ARTags, and AprilTags are square tags with black borders. RUNE-tags and Intersense use different circle features as landmarks\relax }{figure.caption.2}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {ARToolkit}}}{2}{subfigure.2.1}}
@@ -30,14 +28,16 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {AprilTag}}}{2}{subfigure.2.3}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {RUNE-Tag}}}{2}{subfigure.2.4}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {Intersense}}}{2}{subfigure.2.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{section.2}}
+\newlabel{sec:related}{{II}{2}{Related Work}{section.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Challenges}{2}{section.3}}
 \newlabel{sec:problem}{{III}{2}{Challenges}{section.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Approach}{2}{section.4}}
-\newlabel{sec:approach}{{IV}{2}{Approach}{section.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The orientation of Apriltag placed on the object is greatly misaligned with the actual object, making the robot nearly impossible to grab it\relax }}{3}{figure.caption.3}}
-\newlabel{fig:mismatch}{{3}{3}{The orientation of Apriltag placed on the object is greatly misaligned with the actual object, making the robot nearly impossible to grab it\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The orientation of Apriltag placed on the object is greatly misaligned with the actual object, making it nearly impossible for the robot to grab it\relax }}{3}{figure.caption.3}}
+\newlabel{fig:mismatch}{{3}{3}{The orientation of Apriltag placed on the object is greatly misaligned with the actual object, making it nearly impossible for the robot to grab it\relax }{figure.caption.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Perspective Ambiguity illustrated with two overlapping cubes. The red square is a simulated projection of a tag and the orientation of the square is \relax }}{3}{figure.caption.4}}
 \newlabel{fig:cube}{{4}{3}{Perspective Ambiguity illustrated with two overlapping cubes. The red square is a simulated projection of a tag and the orientation of the square is \relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Approach}{3}{section.4}}
+\newlabel{sec:approach}{{IV}{3}{Approach}{section.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Depth Plane Fitting}{3}{subsection.4.1}}
 \newlabel{eq:gaussian_noise}{{1}{3}{Depth Plane Fitting}{subsection.4.1}{}}
 \newlabel{eq:gaussian_noise}{{2}{3}{Depth Plane Fitting}{subsection.4.1}{}}
@@ -49,16 +49,16 @@
 \newlabel{eq:refinement}{{14}{4}{Pose Refinement}{figure.caption.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Experimental Results}{4}{section.5}}
 \newlabel{sec:res}{{V}{4}{Experimental Results}{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Viewing Angle}{4}{subsection.5.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The fiducial tag plane captured by the depth sensor\relax }}{5}{figure.caption.6}}
 \newlabel{fig:exp_setup}{{6}{5}{The fiducial tag plane captured by the depth sensor\relax }{figure.caption.6}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {RGB Image at 40$^{\circ }$}}}{5}{subfigure.6.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Close}}}{5}{subfigure.6.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Viewing Angle}{5}{subsection.5.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.\relax }}{5}{figure.caption.7}}
 \newlabel{fig:viewing_result}{{7}{5}{Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.\relax }{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }}{5}{figure.caption.8}}
-\newlabel{fig:distance_result}{{8}{5}{Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Distance}{5}{subsection.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }}{6}{figure.caption.8}}
+\newlabel{fig:distance_result}{{8}{6}{Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }{figure.caption.8}{}}
 \newlabel{fig:illumination_tag}{{\caption@xref {fig:illumination_tag}{ on input line 51}}{6}{Lighting}{subfigure.9.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Apriltags captured by Kinect V2 under different levels of illumination. The RGB sensor dynamically adjust the exposure time to compensate for low lighting. In (a), the image is captured outside of Kinect's adjustable range and the pixels are underexposed. In (b), the long exposure time introduced noticeable noise to the image. \relax }}{6}{figure.caption.9}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Dark}}}{6}{subfigure.9.1}}
@@ -66,15 +66,15 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Normal}}}{6}{subfigure.9.3}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Bright}}}{6}{subfigure.9.4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Lighting}{6}{subsection.5.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Benchmark Against ar\_track\_alvar}{6}{subsection.5.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Illumination vs Error Percentage. Data are captured at $65$ cm away from the camera at a $40$ degree angle.\relax }}{6}{figure.caption.10}}
 \newlabel{fig:lighting_result}{{10}{6}{Illumination vs Error Percentage. Data are captured at $65$ cm away from the camera at a $40$ degree angle.\relax }{figure.caption.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Average pose errors compared with ar\_track\_alvar package.\relax }}{6}{figure.caption.11}}
 \newlabel{fig:alvartrack}{{11}{6}{Average pose errors compared with ar\_track\_alvar package.\relax }{figure.caption.11}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Rotation Error}}}{6}{subfigure.11.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Translation Error}}}{6}{subfigure.11.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-E}}Computation Time}{6}{subsection.5.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Benchmark Against ar\_track\_alvar}{6}{subsection.5.4}}
 \bibstyle{abbrv}
 \bibdata{bib/references}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-E}}Computation Time}{7}{subsection.5.5}}
 \@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{7}{section.6}}
 \newlabel{sec:conclusion}{{VI}{7}{Conclusion}{section.6}{}}

@@ -16,7 +16,7 @@ In our experiments, we measured the rotational and translational accuracy of the
 
 \subsection{Viewing Angle}
 
-The low localization accuracy caused by the perceptual ambiguity of the Apriltags is a non-linear function on the viewing angle of the tag. To characterize the effect, we placed the testing board on a table straight in front of the robot in a well lit room. Since the sensor is taller than the plane of the table, the robot has to slightly gazing down at it.  We rotated the testing board at a increment of 5 degrees from 30 degrees to 90 degrees. The angles are measured from the axis perpendicular to gazing direction of sensor. This is about the range in which the tag can be detected reliably given the camera resolution and distance. At each angle, we captured the RGB image, depth image, and detection outputs from the Apriltag algorithm. 
+The low localization accuracy caused by the perceptual ambiguity of the Apriltags is a function on the viewing angle of the tag. To characterize the effect, we placed the testing board on a table straight in front of the robot in a well lit room. Since the sensor is taller than the plane of the table, the robot has to slightly gazing down at it.  We rotated the testing board at a increment of 5 degrees from 30 degrees to 90 degrees. The angles are measured from the axis perpendicular to gazing direction of sensor. This is about the range in which the tag can be detected reliably given the camera resolution and distance. At each angle, we captured the RGB image, depth image, and detection outputs from the Apriltag algorithm. 
 
 For each captured data collection, we introduced 3 levels of Gaussian noise of $\sigma = 0.2$, $\sigma = 0.5$, $\sigma = 1$  to the RGB image and computed the resulting tag pose. This is repeated for $1000$ trails at each noise level and the errors are computed for each trial. Figure \ref{fig:viewing_result} shows some of the results. 
 \begin{figure}
@@ -39,7 +39,7 @@ To test the estimation accuracy with respect to distance, we captured the images
 
 The relationship between the distance and localization accuracy is much more apparent. As the tag moves further away from the sensor, the number of pixels on the tag decreases. The perspective ambiguity effect becomes more apparent when there is only a small patch of pixels on the tag. However during the experiment, it is difficult to keep the viewing angle precisely consistent at each trail. Therefore, the pose error percentage using RGB is not increasing smoothly in Figure \ref{fig:distance_result}.
 
-We see a clear increase in error percentage in the proposed method when the tag is far away from the camera. This is contributed both by a smaller tag patch size in the depth image and an increasing in noise with the Kinect sensor at a further distance. In these cases, the variance of the depth plane estimation became very wide and the algorithm is unable to converge to the correct pose. The Nevertheless, our method shows a significant gain in accuracy at every distance.
+We see a clear increase in error percentage in the proposed method when the tag is far away from the camera. This is contributed both by a smaller tag patch size in the depth image and an increase in noise with the Kinect sensor at a further distance. In these cases, the variance of the depth plane estimation becomes very wide and the algorithm is unable to converge to the correct pose. Nevertheless, our method shows a significant gain in accuracy at every distance.
 
 \subsection{Lighting}
 \begin{figure}

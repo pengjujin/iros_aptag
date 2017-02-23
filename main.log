@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.6)  22 FEB 2017 17:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.28)  23 FEB 2017 02:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1027,80 +1027,77 @@ Package caption Info: End \AtBeginDocument code.
 
 (./sections/introduction.tex
 
-Package caption Warning: \label without proper \caption on input line 23.
+Package caption Warning: \label without proper \caption on input line 15.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `fig:table_clearing' on page 1 undefined on input line
- 6.
+ 7.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 12.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 12.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 <figs/table_clearing_rgb_small.png, id=61, 665.48625pt x 320.19624pt>
 File: figs/table_clearing_rgb_small.png Graphic file (type png)
 
 <use figs/table_clearing_rgb_small.png>
-Package pdftex.def Info: figs/table_clearing_rgb_small.png used on input line 2
-1.
+Package pdftex.def Info: figs/table_clearing_rgb_small.png used on input line 1
+3.
 (pdftex.def)             Requested size: 246.93686pt x 120.4495pt.
 
 <figs/table_clearing_depth.png, id=63, 568.1225pt x 256.96pt>
 File: figs/table_clearing_depth.png Graphic file (type png)
 
 <use figs/table_clearing_depth.png>
-Package pdftex.def Info: figs/table_clearing_depth.png used on input line 22.
+Package pdftex.def Info: figs/table_clearing_depth.png used on input line 14.
 (pdftex.def)             Requested size: 246.94923pt x 120.44969pt.
-) (./sections/related.tex
-<figs/tags/artoolkit.png, id=64, 181.67876pt x 182.6825pt>
+LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./figs/table_clearing_rgb_small.png> <./figs/table_clearing_depth.png>] (./se
+ctions/related.tex
+<figs/tags/artoolkit.png, id=77, 181.67876pt x 182.6825pt>
 File: figs/tags/artoolkit.png Graphic file (type png)
 
 <use figs/tags/artoolkit.png>
 Package pdftex.def Info: figs/tags/artoolkit.png used on input line 6.
 (pdftex.def)             Requested size: 50.18773pt x 50.18626pt.
 
-<figs/tags/artags.png, id=65, 170.6375pt x 170.6375pt>
+<figs/tags/artags.png, id=78, 170.6375pt x 170.6375pt>
 File: figs/tags/artags.png Graphic file (type png)
 
 <use figs/tags/artags.png>
 Package pdftex.def Info: figs/tags/artags.png used on input line 7.
 (pdftex.def)             Requested size: 50.1866pt x 50.1866pt.
 
-<figs/tags/apriltags.png, id=66, 176.66pt x 176.66pt>
+<figs/tags/apriltags.png, id=79, 176.66pt x 176.66pt>
 File: figs/tags/apriltags.png Graphic file (type png)
 
 <use figs/tags/apriltags.png>
 Package pdftex.def Info: figs/tags/apriltags.png used on input line 8.
 (pdftex.def)             Requested size: 50.18687pt x 50.18687pt.
 
-<figs/tags/rune.png, id=67, 106.3975pt x 113.42375pt>
+<figs/tags/rune.png, id=80, 106.3975pt x 113.42375pt>
 File: figs/tags/rune.png Graphic file (type png)
  <use figs/tags/rune.png>
 Package pdftex.def Info: figs/tags/rune.png used on input line 9.
 (pdftex.def)             Requested size: 50.18866pt x 50.18697pt.
 
-<figs/tags/intersense.png, id=68, 301.125pt x 299.1175pt>
+<figs/tags/intersense.png, id=81, 301.125pt x 299.1175pt>
 File: figs/tags/intersense.png Graphic file (type png)
 
 <use figs/tags/intersense.png>
 Package pdftex.def Info: figs/tags/intersense.png used on input line 10.
 (pdftex.def)             Requested size: 50.18431pt x 50.18748pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+) (./sections/problem.tex
 
-
- <./figs/table_clearing_rgb_small.png> <./figs/table_clearing_depth.png>])
-Underfull \vbox (badness 5359) has occurred while \output is active []
-
-
-(./sections/problem.tex
-
-Package caption Warning: \label without proper \caption on input line 23.
+Package caption Warning: \label without proper \caption on input line 15.
 See the caption package documentation for explanation.
 
 
@@ -1113,25 +1110,25 @@ File: figs/mismatch_tag.png Graphic file (type png)
 <use figs/mismatch_tag.png>
 Package pdftex.def Info: figs/mismatch_tag.png used on input line 9.
 (pdftex.def)             Requested size: 246.94499pt x 194.21812pt.
-
-<figs/perspective_fig.png, id=86, 627.34375pt x 396.48125pt>
+ [2 <./figs/tags/artoolkit.png> <./figs/tags/artags.png> <./figs/tags/apriltags
+.png> <./figs/tags/rune.png (PNG copy)> <./figs/tags/intersense.png>]
+<figs/perspective_fig.png, id=101, 627.34375pt x 396.48125pt>
 File: figs/perspective_fig.png Graphic file (type png)
 
 <use figs/perspective_fig.png>
 Package pdftex.def Info: figs/perspective_fig.png used on input line 16.
 (pdftex.def)             Requested size: 246.94499pt x 156.06691pt.
-) (./sections/approach.tex [2 <./figs/tags/artoolkit.png> <./figs/tags/artags.p
-ng> <./figs/tags/apriltags.png> <./figs/tags/rune.png (PNG copy)> <./figs/tags/
-intersense.png>] [3 <./figs/mismatch_tag.png> <./figs/perspective_fig.png>]
-<figs/optimization_visualization_fig.png, id=121, 414.8298pt x 142.3719pt>
+) (./sections/approach.tex [3 <./figs/mismatch_tag.png> <./figs/perspective_fig
+.png>]
+<figs/optimization_visualization_fig.png, id=119, 414.8298pt x 142.3719pt>
 File: figs/optimization_visualization_fig.png Graphic file (type png)
 
 <use figs/optimization_visualization_fig.png>
 Package pdftex.def Info: figs/optimization_visualization_fig.png used on input 
-line 54.
+line 55.
 (pdftex.def)             Requested size: 246.94499pt x 84.7525pt.
 ) (./sections/results.tex
-<figs/result_figs/rgb_smallfig.png, id=123, 347.2975pt x 261.97874pt>
+<figs/result_figs/rgb_smallfig.png, id=121, 347.2975pt x 261.97874pt>
 File: figs/result_figs/rgb_smallfig.png Graphic file (type png)
 
 <use figs/result_figs/rgb_smallfig.png>
@@ -1139,7 +1136,7 @@ Package pdftex.def Info: figs/result_figs/rgb_smallfig.png used on input line 6
 .
 (pdftex.def)             Requested size: 246.9539pt x 160.6063pt.
 
-<figs/result_figs/result_0005.png, id=124, 578.16pt x 433.62pt>
+<figs/result_figs/result_0005.png, id=122, 578.16pt x 433.62pt>
 File: figs/result_figs/result_0005.png Graphic file (type png)
 
 <use figs/result_figs/result_0005.png>
@@ -1151,43 +1148,43 @@ Package pdftex.def Info: figs/result_figs/result_0005.png used on input line 7.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./figs/optimization_visualization_fig.png>]
-<figs/viewing_angle_fig1.png, id=137, 639.38875pt x 551.05875pt>
+<figs/viewing_angle_fig1.png, id=134, 639.38875pt x 551.05875pt>
 File: figs/viewing_angle_fig1.png Graphic file (type png)
 
 <use figs/viewing_angle_fig1.png>
 Package pdftex.def Info: figs/viewing_angle_fig1.png used on input line 24.
 (pdftex.def)             Requested size: 246.94499pt x 212.82674pt.
 
-<figs/distance_fig1.png, id=138, 685.56125pt x 268.00125pt>
+<figs/distance_fig1.png, id=135, 685.56125pt x 268.00125pt>
 File: figs/distance_fig1.png Graphic file (type png)
 
 <use figs/distance_fig1.png>
 Package pdftex.def Info: figs/distance_fig1.png used on input line 34.
 (pdftex.def)             Requested size: 246.94499pt x 96.53761pt.
  [5 <./figs/result_figs/rgb_smallfig.png (PNG copy)> <./figs/result_figs/result
-_0005.png> <./figs/viewing_angle_fig1.png> <./figs/distance_fig1.png>] <figs/il
-lumination/dark.png, id=154, 56.21pt x 57.21375pt>
+_0005.png> <./figs/viewing_angle_fig1.png>]
+<figs/illumination/dark.png, id=150, 56.21pt x 57.21375pt>
 File: figs/illumination/dark.png Graphic file (type png)
 
 <use figs/illumination/dark.png>
 Package pdftex.def Info: figs/illumination/dark.png used on input line 47.
 (pdftex.def)             Requested size: 50.1897pt x 50.18935pt.
 
-<figs/illumination/dim.png, id=155, 56.21pt x 59.22125pt>
+<figs/illumination/dim.png, id=151, 56.21pt x 59.22125pt>
 File: figs/illumination/dim.png Graphic file (type png)
 
 <use figs/illumination/dim.png>
 Package pdftex.def Info: figs/illumination/dim.png used on input line 48.
 (pdftex.def)             Requested size: 50.1897pt x 50.18918pt.
 
-<figs/illumination/normal.png, id=156, 56.21pt x 57.21375pt>
+<figs/illumination/normal.png, id=152, 56.21pt x 57.21375pt>
 File: figs/illumination/normal.png Graphic file (type png)
 
 <use figs/illumination/normal.png>
 Package pdftex.def Info: figs/illumination/normal.png used on input line 49.
 (pdftex.def)             Requested size: 50.1897pt x 50.18935pt.
 
-<figs/illumination/bright.png, id=157, 57.21375pt x 58.2175pt>
+<figs/illumination/bright.png, id=153, 57.21375pt x 58.2175pt>
 File: figs/illumination/bright.png Graphic file (type png)
 
 <use figs/illumination/bright.png>
@@ -1202,29 +1199,30 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `fig:illumination_tag' on page 6 undefined on input li
 ne 55.
 
-<figs/lighting_fig1.png, id=160, 578.16pt x 433.62pt>
+<figs/lighting_fig1.png, id=156, 578.16pt x 433.62pt>
 File: figs/lighting_fig1.png Graphic file (type png)
 
 <use figs/lighting_fig1.png>
 Package pdftex.def Info: figs/lighting_fig1.png used on input line 61.
 (pdftex.def)             Requested size: 246.94499pt x 185.20906pt.
 
-<figs/alvar_rot.png, id=161, 294.3798pt x 433.62pt>
+<figs/alvar_rot.png, id=157, 294.3798pt x 433.62pt>
 File: figs/alvar_rot.png Graphic file (type png)
  <use figs/alvar_rot.png>
 Package pdftex.def Info: figs/alvar_rot.png used on input line 71.
 (pdftex.def)             Requested size: 120.44943pt x 180.67676pt.
 
-<figs/alvar_trans.png, id=162, 293.4162pt x 433.62pt>
+<figs/alvar_trans.png, id=158, 293.4162pt x 433.62pt>
 File: figs/alvar_trans.png Graphic file (type png)
 
 <use figs/alvar_trans.png>
 Package pdftex.def Info: figs/alvar_trans.png used on input line 72.
 (pdftex.def)             Requested size: 120.44916pt x 180.67676pt.
-) (./sections/conclusion.tex [6 <./figs/illumination/dark.png (PNG copy)> <./fi
-gs/illumination/dim.png (PNG copy)> <./figs/illumination/normal.png (PNG copy)>
- <./figs/illumination/bright.png (PNG copy)> <./figs/lighting_fig1.png> <./figs
-/alvar_rot.png> <./figs/alvar_trans.png>])
+ [6 <./figs/distance_fig1.png> <./figs/illumination/dark.png (PNG copy)> <./fig
+s/illumination/dim.png (PNG copy)> <./figs/illumination/normal.png (PNG copy)> 
+<./figs/illumination/bright.png (PNG copy)> <./figs/lighting_fig1.png> <./figs/
+alvar_rot.png> <./figs/alvar_trans.png>])
+(./sections/conclusion.tex)
 No file main.bbl.
 
 ** Conference Paper **
@@ -1237,22 +1235,26 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
-Extra height:12.0pt when 74.65744pt
-Extra height:0.0pt when 75.65744pt
-(2)Left:75.65744pt Right:74.16492pt Output:75.65744pt
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
+
+Underfull \vbox (badness 1715) has occurred while \output is active []
+
+Extra height:12.0pt when 169.6074pt
+Extra height:0.0pt when 170.6074pt
+(2)Left:170.6074pt Right:168.06485pt Output:170.6074pt
 - LAST -
 Extra skip:0.0pt
-Left:75.65744pt
-Right:74.16492pt
-Output:75.65744pt
-[7
+Left:170.6074pt
+Right:168.06485pt
+Output:170.6074pt
+ [7
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
- (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
+
+(./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9A83470FB3F70A83CEF70EA583D0FC39;857.
 
@@ -1262,44 +1264,38 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
- 11025 strings out of 493304
- 163743 string characters out of 6139872
- 268777 words of memory out of 5000000
- 14209 multiletter control sequences out of 15000+600000
+ 11022 strings out of 493304
+ 163696 string characters out of 6139871
+ 268652 words of memory out of 5000000
+ 14208 multiletter control sequences out of 15000+600000
  119483 words of font info for 153 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,11n,47p,1773b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.caption.12} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subfigure.10.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 1315625 bytes).
+ 36i,11n,47p,1775b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (7 pages, 1319004 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
  218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
