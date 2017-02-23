@@ -27,13 +27,6 @@ where $\boldsymbol{\hat{n}}$ is the local normal to the planar surface of the de
 
 Another important result we used from [] is the covariance matrix for the plane-parameters. The covariance matrix is obtained by taking the \textit{Moore-Penrose generalized inverse} of Hessian matrix computed from the Lagrangian. The covariance characterizes the uncertainty of the plane and defines the refinement regions of the pose later in the pipeline. 
 
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figs/depth_plane_fig}
-\caption{The depth points of the Apriltag plane. The points are noisy but good for an approximate estimation.}
-\label{fig:depth_data}
-\end{figure}
-
 \subsection{Initial Pose Estimation}
 The pose of the tag can be described as the transformation from tag frame's coordinate system to the sensory frame's coordinate system of the robot given by $[R, \boldsymbol{t}]$. However, the depth plane $D [ \boldsymbol{\hat{n}}, d]$ alone is insufficient to determine the transformation because it only defines 3 DOF in a 6 DOF space. Furthermore, the center of the tag must align with the center of the plane and thus further constrain 2 DOF. However, there are still infinite number of valid poses rotating about the normal $\boldsymbol{\hat{n}}$. One solution is to constrain the pose by using a corner as an extra point correspondence to solve for the optimal rotation. However, the accuracy of this method largely depends on the depth accuracy of the chosen corner point. 
 
