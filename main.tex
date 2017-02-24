@@ -31,7 +31,7 @@ urlcolor=blue
 \usepackage{dirtree}
 \usepackage{graphicx}
 \usepackage{mathtools}
-\usepackage[sort]{natbib}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{fixltx2e}
 
 % Labels in IEEE format
@@ -103,9 +103,9 @@ This paper describes an algorithm that improves the pose estimation accuracy of 
 
 \input{sections/conclusion}
 
-\footnotesize{
-\bibliographystyle{abbrv}
-\bibliography{bib/references}
-}
+{\footnotesize
+\bibliographystyle{ieeetr}
+\bibliography{bib/references}}
+
 \end{document}
 

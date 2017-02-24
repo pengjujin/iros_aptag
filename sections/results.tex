@@ -2,31 +2,27 @@
 \section{Experimental Results}
 
 \begin{figure*}[h]
-\centering
 \subfloat[RGB Image at 40$^{\circ}$]{\includegraphics[width=\columnwidth, height=160px]{figs/result_figs/rgb_smallfig}}
-\subfloat[Close]{\includegraphics[width=\columnwidth, height=170px]{figs/result_figs/result_0005}}
+\subfloat[Close]{\includegraphics[width=\columnwidth, height=170px]{figs/result_figs/result_0005}} \\
 \caption{The fiducial tag plane captured by the depth sensor}
 \label{fig:exp_setup}
 \end{figure*}
 
-\label{sec:res}
-The key problem we are trying to resolve is the localization accuracy of Apriltags in noisy situations. There are two major components we want to demonstrate in this paper: first, we want to characterize the effect of perceptual ambiguity and noise on the Apriltag detection algorithms. Second, we want to test the resilience of our algorithm and show that it can obtain reasonable pose estimations under high level of noise. Finally, we briefly tested the runtime of the algorithm to show that it remains capable of real time detection. 
-
-In our experiments, we measured the rotational and translational accuracy of the detections algorithms with respect to three different independent variables: viewing angles, distances, and lighting conditions. We placed a standard camera calibration chessboard and an Apriltag of known size on a solid planar board. The Apriltag has a fixed distance from the chessboard. This is used to compute the ground-truth pose for the tag. By using a large chessboard, we can detect the corners to a sub-pixel accuracy and compute accurate ground-truth poses unsusceptible to lighting and sensory noises. Figure \ref{fig:exp_setup} demonstrates the experimental set up. 
-
-\subsection{Viewing Angle}
-
-The low localization accuracy caused by the perceptual ambiguity of the Apriltags is a function on the viewing angle of the tag. To characterize the effect, we placed the testing board on a table straight in front of the robot in a well lit room. Since the sensor is taller than the plane of the table, the robot has to slightly gazing down at it.  We rotated the testing board at a increment of 5 degrees from 30 degrees to 90 degrees. The angles are measured from the axis perpendicular to gazing direction of sensor. This is about the range in which the tag can be detected reliably given the camera resolution and distance. At each angle, we captured the RGB image, depth image, and detection outputs from the Apriltag algorithm. 
-
-For each captured data collection, we introduced 3 levels of Gaussian noise of $\sigma = 0.2$, $\sigma = 0.5$, $\sigma = 1$  to the RGB image and computed the resulting tag pose. This is repeated for $1000$ trails at each noise level and the errors are computed for each trial. Figure \ref{fig:viewing_result} shows some of the results. 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{figs/viewing_angle_fig1}
 \caption{Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.}
 \label{fig:viewing_result}
 \end{figure}
 
-As the result shown in figure 7 indicates, the viewing angle has large effect on the rotation error. As we expected, the empirical results show a very clear bimodal distribution for the Apriltags at different viewing angles. The depth-sensor fused algorithm vastly outperforms the previous algorithm as it is not affected by the perceptual ambiguities. The small amount of the noise introduced to the data only cause a small rotational change around the true pose of the tag. In Figure[8], we threshold all the poses based on their rotational errors and plotted the percentage of unacceptable poses at each viewing point. One interesting observation from the data is that, at most viewing angles, the magnitude of noise above a certain threshold has little effect on the localization accuracy. At most viewing angles, relatively small noises causes a significant accuracy decrease. 
+\label{sec:res}
+The key problem we are trying to resolve is the localization accuracy of Apriltags in noisy situations. There are two major components we want to demonstrate in this paper: first, we want to characterize the effect of perceptual ambiguity and noise on the Apriltag detection algorithms. Second, we want to test the resilience of our algorithm and show that it can obtain reasonable pose estimations under high level of noise. Finally, we briefly tested the runtime of the algorithm to show that it remains capable of real time detection. 
+
+In our experiments, we measured the rotational and translational accuracy of the detections algorithms with respect to three different independent variables: viewing angles, distances, and lighting conditions. We placed a standard camera calibration chessboard and an Apriltag of known size on a solid planar board. The Apriltag has a fixed distance from the chessboard. This is used to compute the ground-truth pose for the tag. By using a large chessboard, we can detect the corners to a sub-pixel accuracy and compute accurate ground-truth poses unsusceptible to lighting and sensory noises. Figure \ref{fig:exp_setup} demonstrates the set up. 
+
+\subsection{Viewing Angle}
+
+The low localization accuracy caused by the perceptual ambiguity of the Apriltags is a function on the viewing angle of the tag. To characterize the effect, we placed the testing board on a table straight in front of the robot in a well lit room. Since the sensor is taller than the plane of the table, the robot has to slightly gazing down at it.  We rotated the testing board at a increment of 5 degrees from 30 degrees to 90 degrees. The angles are measured from the axis perpendicular to gazing direction of sensor. This is about the range in which the tag can be detected reliably given the camera resolution and distance. At each angle, we captured the RGB image, depth image, and detection outputs from the Apriltag algorithm. 
 
 \subsection{Distance}
 \begin{figure}
@@ -35,11 +31,10 @@ As the result shown in figure 7 indicates, the viewing angle has large effect on
 \caption{Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.}
 \label{fig:distance_result}
 \end{figure}
-To test the estimation accuracy with respect to distance, we captured the images at different distances away from the camera at a fixed angle. Figure \ref{fig:distance_result} shows the experiment results.
 
-The relationship between the distance and localization accuracy is much more apparent. As the tag moves further away from the sensor, the number of pixels on the tag decreases. The perspective ambiguity effect becomes more apparent when there is only a small patch of pixels on the tag. However during the experiment, it is difficult to keep the viewing angle precisely consistent at each trail. Therefore, the pose error percentage using RGB is not increasing smoothly in Figure \ref{fig:distance_result}.
+For each captured data collection, we introduced 3 levels of Gaussian noise of $\sigma = 0.2$, $\sigma = 0.5$, $\sigma = 1$  to the RGB image and computed the resulting tag pose. This is repeated for $1000$ trails at each noise level and the errors are computed for each trial. Figure \ref{fig:viewing_result} shows some of the results. 
 
-We see a clear increase in error percentage in the proposed method when the tag is far away from the camera. This is contributed both by a smaller tag patch size in the depth image and an increase in noise with the Kinect sensor at a further distance. In these cases, the variance of the depth plane estimation becomes very wide and the algorithm is unable to converge to the correct pose. Nevertheless, our method shows a significant gain in accuracy at every distance.
+As the result shown in figure 7 indicates, the viewing angle has large effect on the rotation error. As we expected, the empirical results show a very clear bimodal distribution for the Apriltags at different viewing angles. The depth-sensor fused algorithm vastly outperforms the previous algorithm as it is not affected by the perceptual ambiguities. The small amount of the noise introduced to the data only cause a small rotational change around the true pose of the tag. In Figure[8], we threshold all the poses based on their rotational errors and plotted the percentage of unacceptable poses at each viewing point. One interesting observation from the data is that, at most viewing angles, the magnitude of noise above a certain threshold has little effect on the localization accuracy. At most viewing angles, relatively small noises causes a significant accuracy decrease. 
 
 \subsection{Lighting}
 \begin{figure}
@@ -52,10 +47,6 @@ We see a clear increase in error percentage in the proposed method when the tag 
 \caption{Apriltags captured by Kinect V2 under different levels of illumination. The RGB sensor dynamically adjust the exposure time to compensate for low lighting. In (a), the image is captured outside of Kinect's adjustable range and the pixels are underexposed. In (b), the long exposure time introduced noticeable noise to the image. }
 \end{figure}
 
-From our past observations, poor lighting condition is the most significant contributing factor to noise and it results in low localization accuracy. The Kinect V2 sensor used in our experiments dynamically adjust the exposure time under low lighting conditions. When pictures are taken below or near the adjustable range of the sensor, they contain very noticeable noise as shown in Figure \ref{fig:illumination_tag}.
-
-We also tested the algorithm under harsh lighting conditions in a real world setting. The data were captured under 4 different lighting conditions: 20 lux (dark), 43 (lux) dim, and (90 lux) normal, 243 lux (bright). We recorded a static scene over 5 seconds and randomly sampled 100 frames to run the test.  As results shown in Figure \ref{fig:lighting_result}, the localization accuracy significantly improves with better illumination. At the lowest illumination, nearly $25\%$ of the poses were unacceptable (more than $20$ degrees off) at the particular viewing angle. By using depth sensor which is unaffected by poor source radiance, there are only ~$3\%$ of unacceptable poses.
-
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{figs/lighting_fig1}
@@ -63,6 +54,15 @@ We also tested the algorithm under harsh lighting conditions in a real world set
 \label{fig:lighting_result}
 \end{figure}
 
+To test the estimation accuracy with respect to distance, we captured the images at different distances away from the camera at a fixed angle. Figure \ref{fig:distance_result} shows the experiment results.
+
+The relationship between the distance and localization accuracy is much more apparent. As the tag moves further away from the sensor, the number of pixels on the tag decreases. The perspective ambiguity effect becomes more apparent when there is only a small patch of pixels on the tag. However during the experiment, it is difficult to keep the viewing angle precisely consistent at each trail. Therefore, the pose error percentage using RGB is not increasing smoothly in Figure \ref{fig:distance_result}.
+
+We see a clear increase in error percentage in the proposed method when the tag is far away from the camera. This is contributed both by a smaller tag patch size in the depth image and an increase in noise with the Kinect sensor at a further distance. In these cases, the variance of the depth plane estimation becomes very wide and the algorithm is unable to converge to the correct pose. Nevertheless, our method shows a significant gain in accuracy at every distance.
+
+From our past observations, poor lighting condition is the most significant contributing factor to noise and it results in low localization accuracy. The Kinect V2 sensor used in our experiments dynamically adjust the exposure time under low lighting conditions. When pictures are taken below or near the adjustable range of the sensor, they contain very noticeable noise as shown in Figure \ref{fig:illumination_tag}.
+
+We also tested the algorithm under harsh lighting conditions in a real world setting. The data were captured under 4 different lighting conditions: 20 lux (dark), 43 (lux) dim, and (90 lux) normal, 243 lux (bright). We recorded a static scene over 5 seconds and randomly sampled 100 frames to run the test.  As results shown in Figure \ref{fig:lighting_result}, the localization accuracy significantly improves with better illumination. At the lowest illumination, nearly $25\%$ of the poses were unacceptable (more than $20$ degrees off) at the particular viewing angle. By using depth sensor which is unaffected by poor source radiance, there are only ~$3\%$ of unacceptable poses.
 
 \subsection{Benchmark Against ar\_track\_alvar}
 
@@ -82,3 +82,10 @@ We implemented a similar module for the Apriltag and compared the pose accuracy 
 We briefly tested the computation time of the new algorithm. With our current implementation in Python, the additional computation time for sensor fusing process is ~$11$ ms. Therefore the entire detection pipeline can process a $960$ x $540$ image within $35$ ms. All tag detectors and the fusing process were running in a single-threaded mode of an Intel core. Since our sensory updates at roughly $35Hz$, the entire pipeline can process the tags and estimate the pose in near real time. There is no significant time increase on a higher resolution image for the fusing process because our algorithm does not need to process the entire image.
 
 The most time consuming step is running the trust region optimization for refining the pose. This process can be sped up significantly by simply implementing the pipeline in C++.
+
+\begin{figure}
+\subfloat[RGB]{\includegraphics[width=125px, height=88px]{figs/rgb_result}}
+\subfloat[RGBD]{\includegraphics[width=125px, height=88px]{figs/rgbd_result}}
+\label{fig:result_compare}
+\caption{The pose of the Apriltag visualized in RViz computed using the original library VS our RGBD fused method.}
+\end{figure}

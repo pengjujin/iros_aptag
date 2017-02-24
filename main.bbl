@@ -1,0 +1,94 @@
+\begin{thebibliography}{10}
+
+\bibitem{fiala2004artag}
+M.~Fiala, ``Artag, an improved marker system based on artoolkit,'' {\em
+  National Research Council Canada, Publication Number: NRC}, vol.~47419,
+  p.~2004, 2004.
+
+\bibitem{olson2011apriltag}
+E.~Olson, ``Apriltag: A robust and flexible visual fiducial system,'' in {\em
+  Robotics and Automation (ICRA), 2011 IEEE International Conference on},
+  pp.~3400--3407, IEEE, 2011.
+
+\bibitem{bergamasco2011rune}
+F.~Bergamasco, A.~Albarelli, E.~Rodola, and A.~Torsello, ``Rune-tag: A high
+  accuracy fiducial marker with strong occlusion resilience,'' in {\em Computer
+  Vision and Pattern Recognition (CVPR), 2011 IEEE Conference on},
+  pp.~113--120, IEEE, 2011.
+
+\bibitem{grest2009comparison}
+D.~Grest, T.~Petersen, and V.~Kr{\"u}ger, ``A comparison of iterative 2d-3d
+  pose estimation methods for real-time applications,'' in {\em Scandinavian
+  Conference on Image Analysis}, pp.~706--715, Springer, 2009.
+
+\bibitem{besl1992method}
+P.~J. Besl and N.~D. McKay, ``Method for registration of 3-d shapes,'' in {\em
+  Robotics-DL tentative}, pp.~586--606, International Society for Optics and
+  Photonics, 1992.
+
+\bibitem{gedik2015rgbd}
+O.~S. Gedik and A.~A. Alatan, ``Rgbd data based pose estimation: Why sensor
+  fusion?,'' in {\em Information Fusion (Fusion), 2015 18th International
+  Conference on}, pp.~2129--2136, IEEE, 2015.
+
+\bibitem{assa2014robust}
+A.~Assa and F.~Janabi-Sharifi, ``A robust vision-based sensor fusion approach
+  for real-time pose estimation,'' {\em IEEE transactions on cybernetics},
+  vol.~44, no.~2, pp.~217--227, 2014.
+
+\bibitem{naimark2002circular}
+L.~Naimark and E.~Foxlin, ``Circular data matrix fiducial system and robust
+  image processing for a wearable vision-inertial self-tracker,'' in {\em Mixed
+  and Augmented Reality, 2002. ISMAR 2002. Proceedings. International Symposium
+  on}, pp.~27--36, IEEE, 2002.
+
+\bibitem{rice2006analysing}
+A.~C. Rice, R.~K. Harle, and A.~R. Beresford, ``Analysing fundamental
+  properties of marker-based vision system designs,'' {\em Pervasive and Mobile
+  Computing}, vol.~2, no.~4, pp.~453--471, 2006.
+
+\bibitem{kato2002artoolkit}
+H.~Kato, ``Artoolkit: library for vision-based augmented reality,'' {\em IEICE,
+  PRMU}, vol.~6, pp.~79--86, 2002.
+
+\bibitem{wang2016apriltag}
+J.~Wang and E.~Olson, ``Apriltag 2: Efficient and robust fiducial detection,''
+  in {\em Intelligent Robots and Systems (IROS), 2016 IEEE/RSJ International
+  Conference on}, pp.~4193--4198, IEEE, 2016.
+
+\bibitem{hartley2003multiple}
+R.~Hartley and A.~Zisserman, {\em Multiple view geometry in computer vision}.
+\newblock Cambridge university press, 2003.
+
+\bibitem{zhang2005general}
+C.-X. Zhang and Z.-Y. Hu, ``A general sufficient condition of four positive
+  solutions of the p3p problem,'' {\em Journal of Computer Science and
+  Technology}, vol.~20, no.~6, pp.~836--842, 2005.
+
+\bibitem{dementhon1992exact}
+D.~DeMenthon and L.~S. Davis, ``Exact and approximate solutions of the
+  perspective-three-point problem,'' {\em IEEE Transactions on Pattern Analysis
+  and Machine Intelligence}, vol.~14, no.~11, pp.~1100--1105, 1992.
+
+\bibitem{haralick1994review}
+B.~M. Haralick, C.-N. Lee, K.~Ottenberg, and M.~N{\"o}lle, ``Review and
+  analysis of solutions of the three point perspective pose estimation
+  problem,'' {\em International journal of computer vision}, vol.~13, no.~3,
+  pp.~331--356, 1994.
+
+\bibitem{horaud1989analytic}
+R.~Horaud, B.~Conio, O.~Leboulleux, and B.~Lacolle, ``An analytic solution for
+  the perspective 4-point problem,'' {\em Computer Vision, Graphics, and Image
+  Processing}, vol.~47, no.~1, pp.~33--44, 1989.
+
+\bibitem{pathak2010uncertainty}
+K.~Pathak, N.~Vaskevicius, and A.~Birk, ``Uncertainty analysis for optimum
+  plane extraction from noisy 3d range-sensor point-clouds,'' {\em Intelligent
+  Service Robotics}, vol.~3, no.~1, pp.~37--48, 2010.
+
+\bibitem{eggert1997estimating}
+D.~W. Eggert, A.~Lorusso, and R.~B. Fisher, ``Estimating 3-d rigid body
+  transformations: a comparison of four major algorithms,'' {\em Machine vision
+  and applications}, vol.~9, no.~5-6, pp.~272--290, 1997.
+
+\end{thebibliography}
