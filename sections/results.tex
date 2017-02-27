@@ -1,7 +1,7 @@
 % !TEX root = ../main.tex
 \section{Experimental Results}
 
-The key problem we are trying to resolve is the localization accuracy of Apriltags in noisy situations. Therefore, we want to test the resilience of our algorithm and show that it can obtain reasonable pose estimations under high level of noise. Figure \ref{fig:result_compare} demonstrates a result    We also compare our method against \textit{ar\_track\_alvar}, a popular ARTag detection package that incorporated depth information. Finally, we briefly tested the runtime of the algorithm to show that it remains capable of real time detection. 
+The key problem we are trying to resolve is the localization accuracy of Apriltags in noisy situations. Therefore, we want to test the resilience of our algorithm and show that it can obtain reasonable pose estimations under high level of noise. Figure \ref{fig:result_compare} demonstrates an example visualization of the result. We also compare our method against \textit{ar\_track\_alvar}, a popular ARTag detection package that incorporated depth information. Finally, we briefly tested the runtime of the algorithm to show that it remains capable of real time detection. 
 
 
 \begin{figure}[h]
@@ -68,7 +68,7 @@ We also tested the algorithm under harsh lighting conditions in a real world set
 \label{fig:alvartrack}
 \end{figure}
 
-ar\_track\_alvar is a ROS wrapper package for Alvar [], an open source AR tag tracking library. The package is designed for AR tag detection and pose estimation for robots similar to Apriltags. In particular, it implements a module where depth sensor is integrated to improve the pose estimation. The package use the detected corner points to extract a patch of point clouds containing the tag. Then it proceed to fit a plane of the point cloud data and find its centroid using PCL. The pose of the tag is computed by aligning the centroid with the center of the tag.   
+ar\_track\_alvar is a ROS wrapper package for Alvar \citep{alvartrack}, an open source AR tag tracking library. The package is designed for AR tag detection and pose estimation for robots similar to Apriltags. In particular, it implements a module where depth sensor is integrated to improve the pose estimation. The package use the detected corner points to extract a patch of point clouds containing the tag. Then it proceed to fit a plane of the point cloud data and find its centroid using PCL. The pose of the tag is computed by aligning the centroid with the center of the tag.   
 
 We implemented a similar module for the Apriltag and compared the pose accuracy between our proposed method and the module using all the collected data. The results are shown in Figure \ref{fig:alvartrack}. The two algorithms performed similarly in rotation error, but the proposed method was on average $2$ cm better with the position component. The spread of error is also much smaller for the position component indicating that our purposed method is more consistent.
 

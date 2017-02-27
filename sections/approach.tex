@@ -61,8 +61,8 @@ $R$ and $t$ are the corresponding rotation and translation components of the the
 \begin{figure}
 \subfloat[RGB]{\includegraphics[width=125px, height=88px]{figs/rgb_result}}
 \subfloat[RGBD]{\includegraphics[width=125px, height=88px]{figs/rgbd_result}}
-\label{fig:result_compare}
 \caption{The pose of the Apriltag visualized in RViz computed using the original library VS our RGBD fused method.}
+\label{fig:result_compare}
 \end{figure}
 
 Lastly, the pose is refined by minimizing the reprojection error using the initial pose estimated from the previous step. The camera is assumed to be calibrated and the camera projection model $K$ is known. We denote $R^*$ and $\boldsymbol{t^{*}}$ to be the optimal pose in the constrained optimization function

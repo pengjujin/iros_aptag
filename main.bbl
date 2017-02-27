@@ -91,4 +91,7 @@ D.~W. Eggert, A.~Lorusso, and R.~B. Fisher, ``Estimating 3-d rigid body
   transformations: a comparison of four major algorithms,'' {\em Machine vision
   and applications}, vol.~9, no.~5-6, pp.~272--290, 1997.
 
+\bibitem{alvartrack}
+S.~Niekum, ``ar_track_alvar ros package.''
+
 \end{thebibliography}
