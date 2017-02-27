@@ -1,30 +1,19 @@
 % !TEX root = ../main.tex
 \section{Experimental Results}
 
-\begin{figure*}[h]
-\subfloat[RGB image at 60$^{\circ}$]{\includegraphics[width=\columnwidth, height=160px]{figs/result_figs/rgb_smallfig}
-\label{fig:exp_setup}}
-\subfloat[Rotation errors across 1000 trials]{\includegraphics[width=\columnwidth, height=170px]{figs/result_figs/result_0005}
-\label{fig:bimodal}} \\
-\caption{Experimental setup. Groundtruth is computed from a large chessboard where the relative transformation to the tag is known. Each data collection is ran through $1000$ trails and pose errors are measured.}
-\label{fig:angle_result}
-\end{figure*}
+The key problem we are trying to resolve is the localization accuracy of Apriltags in noisy situations. Therefore, we want to test the resilience of our algorithm and show that it can obtain reasonable pose estimations under high level of noise. Figure \ref{fig:result_compare} demonstrates a result    We also compare our method against \textit{ar\_track\_alvar}, a popular ARTag detection package that incorporated depth information. Finally, we briefly tested the runtime of the algorithm to show that it remains capable of real time detection. 
+
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{figs/viewing_angle_fig1}
+\includegraphics[width=\columnwidth, height=130px]{figs/viewing_angle_fig2}
 \caption{Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.}
 \label{fig:viewing_result}
 \end{figure}
 
-\label{sec:res}
-The key problem we are trying to resolve is the localization accuracy of Apriltags in noisy situations. There are two major components we want to demonstrate in this paper: first, we want to characterize the effect of perceptual ambiguity and noise on the Apriltag detection algorithm. Second, we want to test the resilience of our algorithm and show that it can obtain reasonable pose estimations under high level of noise. We also compare our method against \textit{ar\_track\_alvar}, a popular ARTag detection package that incorporated depth information. Finally, we briefly tested the runtime of the algorithm to show that it remains capable of real time detection. 
-
 In our experiments, we measured the rotational and translation accuracy of the detection algorithms with respect to three different independent variables: viewing angles, distances, and lighting conditions. We placed a standard camera calibration chessboard and an Apriltag of known size on a solid planar board. The Apriltag has a fixed distance from the chessboard. This is used to compute the ground-truth pose for the tag. By using a large chessboard, we can detect the corners to a sub-pixel accuracy and compute accurate ground-truth poses unsusceptible to lighting and sensory noises. 
 
 \subsection{Viewing Angle}
-
-Due to the perspective ambiguity effect, the localization accuracy of the Apriltags changes based on the viewing angle of the tag. To characterize the effect, we placed the testing board on a table straight in front of the robot as shown in \ref{fig:exp_setup}. Since the sensor is taller than the plane of the table, the robot has to slightly gaze down at it. We rotated the testing board at a increment of 5 degrees from 30 degrees to 90 degrees. The angles are measured from the axis perpendicular to gazing direction of sensor. This is about the range which the tag can be detected reliably given the camera resolution and the distance. At each angle, we captured the RGB image, depth image, and detection outputs from the Apriltag library. 
 
 \begin{figure}
 \centering
@@ -33,11 +22,20 @@ Due to the perspective ambiguity effect, the localization accuracy of the Aprilt
 \label{fig:distance_result}
 \end{figure}
 
-For each captured data bundle, we introduced 3 levels of Gaussian noise of $\sigma = 0.05$, $\sigma = 0.5$, $\sigma = 1$  to the RGB image and computed the resulting tag pose. This is repeated for $1000$ trails for each data bundle per noise level and the errors are computed for each trial.  
+Due to the perspective ambiguity effect, the localization accuracy of the Apriltags is heavily affected by the viewing angle of the tag. To characterize the effect, we placed the testing board on a table straight in front of the robot as shown in \ref{fig:exp_setup}. Since the sensor is taller than the plane of the table, the robot has to slightly gaze down at it. We placed the testing board ~$0.65$ meters away from the sensor and rotated it at a increment of 5 degrees from 0 degrees to 60. The angles are measured from the axis parallel to the sensor. This is about the range which the tag can be detected reliably given the camera resolution and the distance. At each angle, we captured the RGB image, depth image, and detection outputs from the Apriltag library. 
+
+For each captured data bundle, we introduced 3 levels of Gaussian noise of $\sigma = 0.2$, $\sigma = 0.5$, $\sigma = 1$  to the RGB image and computed the resulting tag pose. This is repeated for $1000$ trails for each data bundle per noise level and the errors are computed for each trial.  
 
 The empirical result in Figure \ref{fig:bimodal} show a very clear bimodal distribution, as we expected, for the detected poses for a given data bundle over $1000$ trials. In Figure \ref{fig:viewing_result}, we threshold all the poses based on their rotational errors and plotted the percentage of unacceptable poses at each viewing angle. The proposed RGBD fused algorithm vastly outperforms the original algorithm as it has better localization accuracy at all viewing angles and noise levels. 
 
 \subsection{Distance}
+
+%To test the estimation accuracy with respect to distance, we captured the images at different distances away from the camera at a fixed angle. Figure \ref{fig:distance_result} shows the experiment results.
+The relationship between the distance and localization accuracy is much more apparent. As the tag moves further away from the sensor, the number of pixels on the tag decreases. The perspective ambiguity effect becomes more apparent when there is only a small patch of pixels on the tag. We show the results of  both RGB and RGBD methods in Figure \ref{fig:distance_result}. During the experiment, it is difficult to keep the viewing angle precisely consistent at each trail. Therefore, the pose error percentage using RGB is not increasing smoothly as they are in the simulation results.
+
+We see a clear increase in error percentage in the proposed method when the tag is far away from the camera. This is contributed both by a smaller tag patch size in the depth image and an increase in noise with the Kinect sensor at a further distance. In these cases, the variance of the depth plane estimation becomes very wide and the algorithm is unable to converge to the correct pose. Nevertheless, our method shows a significant gain in accuracy at every distance.
+
+\subsection{Lighting}
 
 \begin{figure}
 \centering
@@ -45,24 +43,16 @@ The empirical result in Figure \ref{fig:bimodal} show a very clear bimodal distr
 \subfloat[Dim]{\includegraphics[width=50px, height=50px]{figs/illumination/dim}}
 \subfloat[Normal]{\includegraphics[width=50px, height=50px]{figs/illumination/normal}}
 \subfloat[Bright]{\includegraphics[width=50px, height=50px]{figs/illumination/bright}}
-\label{fig:illumination_tag}
 \caption{Apriltags captured by Kinect V2 under different levels of illumination. The RGB sensor dynamically adjust the exposure time to compensate for low lighting. In (a), the image is captured outside of Kinect's adjustable range and the pixels are underexposed. In (b), the long exposure time introduced noticeable noise to the image. }
+\label{fig:illumination_tag}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{figs/lighting_fig1}
 \caption{Illumination vs Error Percentage. Data are captured at $65$ cm away from the camera at a $40$ degree angle.}
 \label{fig:lighting_result}
 \end{figure}
-
-To test the estimation accuracy with respect to distance, we captured the images at different distances away from the camera at a fixed angle. Figure \ref{fig:distance_result} shows the experiment results.
-
-The relationship between the distance and localization accuracy is much more apparent. As the tag moves further away from the sensor, the number of pixels on the tag decreases. The perspective ambiguity effect becomes more apparent when there is only a small patch of pixels on the tag. However during the experiment, it is difficult to keep the viewing angle precisely consistent at each trail. Therefore, the pose error percentage using RGB is not increasing smoothly in Figure \ref{fig:distance_result}.
-
-We see a clear increase in error percentage in the proposed method when the tag is far away from the camera. This is contributed both by a smaller tag patch size in the depth image and an increase in noise with the Kinect sensor at a further distance. In these cases, the variance of the depth plane estimation becomes very wide and the algorithm is unable to converge to the correct pose. Nevertheless, our method shows a significant gain in accuracy at every distance.
-
-\subsection{Lighting}
 
 From our past observations, poor lighting condition is the most significant contributing factor to noise and it results in low localization accuracy. The Kinect V2 sensor used in our experiments dynamically adjust the exposure time under low lighting conditions. When pictures are taken below or near the adjustable range of the sensor, they contain very noticeable noise as shown in Figure \ref{fig:illumination_tag}.
 
@@ -86,10 +76,3 @@ We implemented a similar module for the Apriltag and compared the pose accuracy 
 We briefly tested the computation time of the new algorithm. With our current implementation in Python, the additional computation time for sensor fusing process is ~$11$ ms. Therefore the entire detection pipeline can process a $960$ x $540$ image within $35$ ms. All tag detectors and the fusing process were running in a single-threaded mode of an Intel core. Since our sensory updates at roughly $35Hz$, the entire pipeline can process the tags and estimate the pose in near real time. There is no significant time increase on a higher resolution image for the fusing process because our algorithm does not need to process the entire image.
 
 The most time consuming step is running the trust region optimization for refining the pose. This process can be sped up significantly by simply implementing the pipeline in C++.
-
-\begin{figure}
-\subfloat[RGB]{\includegraphics[width=125px, height=88px]{figs/rgb_result}}
-\subfloat[RGBD]{\includegraphics[width=125px, height=88px]{figs/rgbd_result}}
-\label{fig:result_compare}
-\caption{The pose of the Apriltag visualized in RViz computed using the original library VS our RGBD fused method.}
-\end{figure}
