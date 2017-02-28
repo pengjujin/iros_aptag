@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.28)  28 FEB 2017 02:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.6)  28 FEB 2017 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1063,55 +1063,55 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 28.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 (./sections/related.tex
-<figs/tags/artoolkit.png, id=82, 181.67876pt x 182.6825pt>
+<figs/tags/artoolkit.png, id=83, 181.67876pt x 182.6825pt>
 File: figs/tags/artoolkit.png Graphic file (type png)
 
 <use figs/tags/artoolkit.png>
 Package pdftex.def Info: figs/tags/artoolkit.png used on input line 6.
 (pdftex.def)             Requested size: 50.18773pt x 50.18626pt.
 
-<figs/tags/artags.png, id=83, 170.6375pt x 170.6375pt>
+<figs/tags/artags.png, id=84, 170.6375pt x 170.6375pt>
 File: figs/tags/artags.png Graphic file (type png)
 
 <use figs/tags/artags.png>
 Package pdftex.def Info: figs/tags/artags.png used on input line 7.
 (pdftex.def)             Requested size: 50.1866pt x 50.1866pt.
 
-<figs/tags/apriltags.png, id=84, 176.66pt x 176.66pt>
+<figs/tags/apriltags.png, id=85, 176.66pt x 176.66pt>
 File: figs/tags/apriltags.png Graphic file (type png)
 
 <use figs/tags/apriltags.png>
 Package pdftex.def Info: figs/tags/apriltags.png used on input line 8.
 (pdftex.def)             Requested size: 50.18687pt x 50.18687pt.
 
-<figs/tags/rune.png, id=85, 106.3975pt x 113.42375pt>
+<figs/tags/rune.png, id=86, 106.3975pt x 113.42375pt>
 File: figs/tags/rune.png Graphic file (type png)
  <use figs/tags/rune.png>
 Package pdftex.def Info: figs/tags/rune.png used on input line 9.
 (pdftex.def)             Requested size: 50.18866pt x 50.18697pt.
 
-<figs/tags/intersense.png, id=86, 301.125pt x 299.1175pt>
+<figs/tags/intersense.png, id=87, 301.125pt x 299.1175pt>
 File: figs/tags/intersense.png Graphic file (type png)
 
 <use figs/tags/intersense.png>
 Package pdftex.def Info: figs/tags/intersense.png used on input line 10.
 (pdftex.def)             Requested size: 50.18431pt x 50.18748pt.
 
-<figs/perspective_fig.png, id=95, 627.34375pt x 396.48125pt>
+<figs/perspective_fig.png, id=96, 627.34375pt x 396.48125pt>
 File: figs/perspective_fig.png Graphic file (type png)
 
 <use figs/perspective_fig.png>
 Package pdftex.def Info: figs/perspective_fig.png used on input line 22.
 (pdftex.def)             Requested size: 246.94499pt x 156.06691pt.
 
-<figs/simulation_rotation.png, id=96, 700.2963pt x 432.8973pt>
+<figs/simulation_rotation.png, id=97, 700.2963pt x 432.8973pt>
 File: figs/simulation_rotation.png Graphic file (type png)
 
 <use figs/simulation_rotation.png>
 Package pdftex.def Info: figs/simulation_rotation.png used on input line 30.
 (pdftex.def)             Requested size: 246.9453pt x 160.59885pt.
 
-<figs/simulation_trans.png, id=97, 650.43pt x 410.4936pt>
+<figs/simulation_trans.png, id=98, 650.43pt x 410.4936pt>
 File: figs/simulation_trans.png Graphic file (type png)
 
 <use figs/simulation_trans.png>
@@ -1122,13 +1122,13 @@ Package pdftex.def Info: figs/simulation_trans.png used on input line 32.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4341) has occurred while \output is active []
 
  [2 <./figs/tags/artoolkit.png> <./figs/tags/artags.png> <./figs/tags/apriltags
 .png> <./figs/tags/rune.png (PNG copy)> <./figs/tags/intersense.png> <./figs/pe
 rspective_fig.png>] (./sections/problem.tex) (./sections/approach.tex [3 <./fig
 s/simulation_rotation.png> <./figs/simulation_trans.png>]
-<figs/optimization_visualization_fig.png, id=163, 414.8298pt x 142.3719pt>
+<figs/optimization_visualization_fig.png, id=162, 414.8298pt x 142.3719pt>
 File: figs/optimization_visualization_fig.png Graphic file (type png)
 
 <use figs/optimization_visualization_fig.png>
@@ -1136,14 +1136,14 @@ Package pdftex.def Info: figs/optimization_visualization_fig.png used on input
 line 33.
 (pdftex.def)             Requested size: 246.94499pt x 84.7525pt.
 
-<figs/rgb_result.png, id=164, 525.965pt x 366.36874pt>
+<figs/rgb_result.png, id=163, 525.965pt x 366.36874pt>
 File: figs/rgb_result.png Graphic file (type png)
 
 <use figs/rgb_result.png>
 Package pdftex.def Info: figs/rgb_result.png used on input line 43.
 (pdftex.def)             Requested size: 125.46371pt x 88.3272pt.
 
-<figs/rgbd_result.png, id=165, 497.86pt x 347.2975pt>
+<figs/rgbd_result.png, id=164, 497.86pt x 347.2975pt>
 File: figs/rgbd_result.png Graphic file (type png)
 
 <use figs/rgbd_result.png>
@@ -1154,7 +1154,7 @@ Overfull \hbox (3.98618pt too wide) in paragraph at lines 43--45
 [][][][] 
  []
 
-<figs/result_figs/rgb_smallfig.png, id=166, 347.2975pt x 261.97874pt>
+<figs/result_figs/rgb_smallfig.png, id=165, 347.2975pt x 261.97874pt>
 File: figs/result_figs/rgb_smallfig.png Graphic file (type png)
 
 <use figs/result_figs/rgb_smallfig.png>
@@ -1162,7 +1162,7 @@ Package pdftex.def Info: figs/result_figs/rgb_smallfig.png used on input line 5
 1.
 (pdftex.def)             Requested size: 246.9539pt x 160.6063pt.
 
-<figs/result_figs/result_0005.png, id=167, 578.16pt x 433.62pt>
+<figs/result_figs/result_0005.png, id=166, 578.16pt x 433.62pt>
 File: figs/result_figs/result_0005.png Graphic file (type png)
 
 <use figs/result_figs/result_0005.png>
@@ -1179,54 +1179,50 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./figs/optimization_visualization_fig.png> <./figs/rgb_result.png> <./figs/
 rgbd_result.png>]
-<figs/viewing_angle_fig2.png, id=194, 666.3294pt x 437.2335pt>
+<figs/viewing_angle_fig2.png, id=195, 666.3294pt x 437.2335pt>
 File: figs/viewing_angle_fig2.png Graphic file (type png)
 
 <use figs/viewing_angle_fig2.png>
 Package pdftex.def Info: figs/viewing_angle_fig2.png used on input line 94.
 (pdftex.def)             Requested size: 246.9447pt x 130.49054pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 ) (./sections/results.tex [5 <./figs/result_figs/rgb_smallfig.png (PNG copy)> <
 ./figs/result_figs/result_0005.png> <./figs/viewing_angle_fig2.png>]
-<figs/distance_fig2.png, id=206, 793.5246pt x 412.6617pt>
+<figs/distance_fig2.png, id=207, 793.5246pt x 412.6617pt>
 File: figs/distance_fig2.png Graphic file (type png)
 
 <use figs/distance_fig2.png>
 Package pdftex.def Info: figs/distance_fig2.png used on input line 12.
 (pdftex.def)             Requested size: 246.94499pt x 128.42123pt.
 
-<figs/illumination/dark.png, id=210, 56.21pt x 57.21375pt>
+<figs/illumination/dark.png, id=211, 56.21pt x 57.21375pt>
 File: figs/illumination/dark.png Graphic file (type png)
 
 <use figs/illumination/dark.png>
 Package pdftex.def Info: figs/illumination/dark.png used on input line 25.
 (pdftex.def)             Requested size: 50.1897pt x 50.18935pt.
 
-<figs/illumination/dim.png, id=211, 56.21pt x 59.22125pt>
+<figs/illumination/dim.png, id=212, 56.21pt x 59.22125pt>
 File: figs/illumination/dim.png Graphic file (type png)
 
 <use figs/illumination/dim.png>
 Package pdftex.def Info: figs/illumination/dim.png used on input line 26.
 (pdftex.def)             Requested size: 50.1897pt x 50.18918pt.
 
-<figs/illumination/normal.png, id=212, 56.21pt x 57.21375pt>
+<figs/illumination/normal.png, id=213, 56.21pt x 57.21375pt>
 File: figs/illumination/normal.png Graphic file (type png)
 
 <use figs/illumination/normal.png>
 Package pdftex.def Info: figs/illumination/normal.png used on input line 27.
 (pdftex.def)             Requested size: 50.1897pt x 50.18935pt.
 
-<figs/illumination/bright.png, id=213, 57.21375pt x 58.2175pt>
+<figs/illumination/bright.png, id=214, 57.21375pt x 58.2175pt>
 File: figs/illumination/bright.png Graphic file (type png)
 
 <use figs/illumination/bright.png>
 Package pdftex.def Info: figs/illumination/bright.png used on input line 28.
 (pdftex.def)             Requested size: 50.18935pt x 50.18953pt.
 
-<figs/lighting_fig1.png, id=214, 578.16pt x 433.62pt>
+<figs/lighting_fig1.png, id=215, 578.16pt x 433.62pt>
 File: figs/lighting_fig1.png Graphic file (type png)
 
 <use figs/lighting_fig1.png>
@@ -1235,13 +1231,13 @@ Package pdftex.def Info: figs/lighting_fig1.png used on input line 35.
  [6 <./figs/distance_fig2.png> <./figs/illumination/dark.png (PNG copy)> <./fig
 s/illumination/dim.png (PNG copy)> <./figs/illumination/normal.png (PNG copy)> 
 <./figs/illumination/bright.png (PNG copy)> <./figs/lighting_fig1.png>] <figs/a
-lvar_rot.png, id=231, 433.62pt x 554.5518pt>
+lvar_rot.png, id=232, 433.62pt x 554.5518pt>
 File: figs/alvar_rot.png Graphic file (type png)
 
 <use figs/alvar_rot.png>
 Package pdftex.def Info: figs/alvar_rot.png used on input line 57.
 (pdftex.def)             Requested size: 120.44676pt x 180.67567pt.
- <figs/alvar_trans.png, id=232, 433.62pt x 554.5518pt>
+ <figs/alvar_trans.png, id=233, 433.62pt x 554.5518pt>
 File: figs/alvar_trans.png Graphic file (type png)
 
 <use figs/alvar_trans.png>
@@ -1253,6 +1249,7 @@ Underfull \hbox (badness 1681) in paragraph at lines 4--7
 \T1/ptm/m/n/8 ,
  []
 
+[7 <./figs/alvar_rot.png> <./figs/alvar_trans.png>]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -1304,17 +1301,44 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
-Extra height:13.55556pt when 679.63297pt
-Extra height:0.0pt when 680.63297pt
-(2)Left:680.63297pt Right:669.62547pt Output:680.63297pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:12.0pt when 26.27777pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:12.0pt when 27.27777pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:12.0pt when 28.27777pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:12.0pt when 29.27777pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:0.0pt when 30.27777pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+(2)Left:30.27777pt Right:25.55556pt Output:30.27777pt
 - LAST -
 Extra skip:0.0pt
-Left:680.63297pt
-Right:669.62547pt
-Output:680.63297pt
-[7 <./figs/alvar_rot.png> <./figs/alvar_trans.png>]
+Left:30.27777pt
+Right:25.55556pt
+Output:30.27777pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
- (./main.aux)
+
+(./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -1326,13 +1350,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
- 11138 strings out of 493304
- 166371 string characters out of 6139871
- 290176 words of memory out of 5000000
+ 11139 strings out of 493304
+ 166377 string characters out of 6139872
+ 271176 words of memory out of 5000000
  14292 multiletter control sequences out of 15000+600000
  119512 words of font info for 153 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,11n,47p,1820b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,47p,1820b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/
@@ -1354,9 +1378,9 @@ ts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 2369112 bytes).
+Output written on main.pdf (8 pages, 2370078 bytes).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
+ 342 PDF objects out of 1000 (max. 8388607)
+ 73 named destinations out of 1000 (max. 500000)
  238 words of extra memory for PDF output out of 10000 (max. 10000000)
 
