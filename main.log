@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.6)  28 FEB 2017 00:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.28)  28 FEB 2017 02:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1028,39 +1028,40 @@ File: figs/table_clearing_rgb_small.png Graphic file (type png)
 
 <use figs/table_clearing_rgb_small.png>
 Package pdftex.def Info: figs/table_clearing_rgb_small.png used on input line 1
-1.
+0.
 (pdftex.def)             Requested size: 246.93686pt x 120.4495pt.
 
 <figs/table_clearing_depth.png, id=64, 568.1225pt x 256.96pt>
 File: figs/table_clearing_depth.png Graphic file (type png)
 
 <use figs/table_clearing_depth.png>
-Package pdftex.def Info: figs/table_clearing_depth.png used on input line 12.
+Package pdftex.def Info: figs/table_clearing_depth.png used on input line 11.
 (pdftex.def)             Requested size: 246.94923pt x 120.44969pt.
 
 <figs/pipeline.png, id=65, 994.71625pt x 472.76625pt>
 File: figs/pipeline.png Graphic file (type png)
  <use figs/pipeline.png>
-Package pdftex.def Info: figs/pipeline.png used on input line 18.
+Package pdftex.def Info: figs/pipeline.png used on input line 17.
 (pdftex.def)             Requested size: 246.94499pt x 117.36168pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 29.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 29.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./figs/table_clearing_rgb_small.png> <./figs/table_clearing_depth.png> <./fig
-s/pipeline.png (PNG copy)>])
+s/pipeline.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 (./sections/related.tex
 <figs/tags/artoolkit.png, id=82, 181.67876pt x 182.6825pt>
 File: figs/tags/artoolkit.png Graphic file (type png)
@@ -1326,8 +1327,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
  11138 strings out of 493304
- 166371 string characters out of 6139872
- 290243 words of memory out of 5000000
+ 166371 string characters out of 6139871
+ 290176 words of memory out of 5000000
  14292 multiletter control sequences out of 15000+600000
  119512 words of font info for 153 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1353,7 +1354,7 @@ ts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 2368824 bytes).
+Output written on main.pdf (7 pages, 2369112 bytes).
 PDF statistics:
  335 PDF objects out of 1000 (max. 8388607)
  72 named destinations out of 1000 (max. 500000)
