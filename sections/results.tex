@@ -3,14 +3,6 @@
 
 The key problem we are trying to resolve is the localization accuracy of Apriltags in noisy situations. Therefore, we want to test the resilience of our algorithm and show that it can obtain reasonable pose estimations under high level of noise. Figure \ref{fig:result_compare} demonstrates an example visualization of the result. We also compare our method against \textit{ar\_track\_alvar}, a popular ARTag detection package that incorporated depth information. Finally, we briefly tested the runtime of the algorithm to show that it remains capable of real time detection. 
 
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=\columnwidth, height=130px]{figs/viewing_angle_fig2}
-\caption{Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.}
-\label{fig:viewing_result}
-\end{figure}
-
 In our experiments, we measured the rotational and translation accuracy of the detection algorithms with respect to three different independent variables: viewing angles, distances, and lighting conditions. We placed a standard camera calibration chessboard and an Apriltag of known size on a solid planar board. The Apriltag has a fixed distance from the chessboard. This is used to compute the ground-truth pose for the tag. By using a large chessboard, we can detect the corners to a sub-pixel accuracy and compute accurate ground-truth poses unsusceptible to lighting and sensory noises. 
 
 \subsection{Viewing Angle}
@@ -28,15 +20,6 @@ For each captured data bundle, we introduced 3 levels of Gaussian noise of $\sig
 
 The empirical result in Figure \ref{fig:bimodal} show a very clear bimodal distribution, as we expected, for the detected poses for a given data bundle over $1000$ trials. In Figure \ref{fig:viewing_result}, we threshold all the poses based on their rotational errors and plotted the percentage of unacceptable poses at each viewing angle. The proposed RGBD fused algorithm vastly outperforms the original algorithm as it has better localization accuracy at all viewing angles and noise levels. 
 
-\subsection{Distance}
-
-%To test the estimation accuracy with respect to distance, we captured the images at different distances away from the camera at a fixed angle. Figure \ref{fig:distance_result} shows the experiment results.
-The relationship between the distance and localization accuracy is much more apparent. As the tag moves further away from the sensor, the number of pixels on the tag decreases. The perspective ambiguity effect becomes more apparent when there is only a small patch of pixels on the tag. We show the results of  both RGB and RGBD methods in Figure \ref{fig:distance_result}. During the experiment, it is difficult to keep the viewing angle precisely consistent at each trail. Therefore, the pose error percentage using RGB is not increasing smoothly as they are in the simulation results.
-
-We see a clear increase in error percentage in the proposed method when the tag is far away from the camera. This is contributed both by a smaller tag patch size in the depth image and an increase in noise with the Kinect sensor at a further distance. In these cases, the variance of the depth plane estimation becomes very wide and the algorithm is unable to converge to the correct pose. Nevertheless, our method shows a significant gain in accuracy at every distance.
-
-\subsection{Lighting}
-
 \begin{figure}
 \centering
 \subfloat[Dark]{\includegraphics[width=50px, height=50px]{figs/illumination/dark}}
@@ -47,12 +30,21 @@ We see a clear increase in error percentage in the proposed method when the tag 
 \label{fig:illumination_tag}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{figs/lighting_fig1}
 \caption{Illumination vs Error Percentage. Data are captured at $65$ cm away from the camera at a $40$ degree angle.}
 \label{fig:lighting_result}
 \end{figure}
+
+\subsection{Distance}
+
+%To test the estimation accuracy with respect to distance, we captured the images at different distances away from the camera at a fixed angle. Figure \ref{fig:distance_result} shows the experiment results.
+The relationship between the distance and localization accuracy is much more apparent. As the tag moves further away from the sensor, the number of pixels on the tag decreases. The perspective ambiguity effect becomes more apparent when there is only a small patch of pixels on the tag. We show the results of  both RGB and RGBD methods in Figure \ref{fig:distance_result}. During the experiment, it is difficult to keep the viewing angle precisely consistent at each trail. Therefore, the pose error percentage using RGB is not increasing smoothly as they are in the simulation results.
+
+We see a clear increase in error percentage in the proposed method when the tag is far away from the camera. This is contributed both by a smaller tag patch size in the depth image and an increase in noise with the Kinect sensor at a further distance. In these cases, the variance of the depth plane estimation becomes very wide and the algorithm is unable to converge to the correct pose. Nevertheless, our method shows a significant gain in accuracy at every distance.
+
+\subsection{Lighting}
 
 From our past observations, poor lighting condition is the most significant contributing factor to noise and it results in low localization accuracy. The Kinect V2 sensor used in our experiments dynamically adjust the exposure time under low lighting conditions. When pictures are taken below or near the adjustable range of the sensor, they contain very noticeable noise as shown in Figure \ref{fig:illumination_tag}.
 

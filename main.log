@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.6)  27 FEB 2017 13:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.6)  28 FEB 2017 00:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1023,98 +1023,110 @@ Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 (./sections/introduction.tex
-<figs/table_clearing_rgb_small.png, id=63, 665.48625pt x 320.19624pt>
+<figs/table_clearing_rgb_small.png, id=62, 665.48625pt x 320.19624pt>
 File: figs/table_clearing_rgb_small.png Graphic file (type png)
 
 <use figs/table_clearing_rgb_small.png>
 Package pdftex.def Info: figs/table_clearing_rgb_small.png used on input line 1
-0.
+1.
 (pdftex.def)             Requested size: 246.93686pt x 120.4495pt.
 
-<figs/table_clearing_depth.png, id=65, 568.1225pt x 256.96pt>
+<figs/table_clearing_depth.png, id=64, 568.1225pt x 256.96pt>
 File: figs/table_clearing_depth.png Graphic file (type png)
 
 <use figs/table_clearing_depth.png>
-Package pdftex.def Info: figs/table_clearing_depth.png used on input line 11.
+Package pdftex.def Info: figs/table_clearing_depth.png used on input line 12.
 (pdftex.def)             Requested size: 246.94923pt x 120.44969pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
 
+<figs/pipeline.png, id=65, 994.71625pt x 472.76625pt>
+File: figs/pipeline.png Graphic file (type png)
+ <use figs/pipeline.png>
+Package pdftex.def Info: figs/pipeline.png used on input line 18.
+(pdftex.def)             Requested size: 246.94499pt x 117.36168pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./figs/table_clearing_rgb_small.png> <./figs/table_clearing_depth.png>] (./se
-ctions/related.tex
-<figs/tags/artoolkit.png, id=81, 181.67876pt x 182.6825pt>
+ <./figs/table_clearing_rgb_small.png> <./figs/table_clearing_depth.png> <./fig
+s/pipeline.png (PNG copy)>])
+(./sections/related.tex
+<figs/tags/artoolkit.png, id=82, 181.67876pt x 182.6825pt>
 File: figs/tags/artoolkit.png Graphic file (type png)
 
 <use figs/tags/artoolkit.png>
 Package pdftex.def Info: figs/tags/artoolkit.png used on input line 6.
 (pdftex.def)             Requested size: 50.18773pt x 50.18626pt.
 
-<figs/tags/artags.png, id=82, 170.6375pt x 170.6375pt>
+<figs/tags/artags.png, id=83, 170.6375pt x 170.6375pt>
 File: figs/tags/artags.png Graphic file (type png)
 
 <use figs/tags/artags.png>
 Package pdftex.def Info: figs/tags/artags.png used on input line 7.
 (pdftex.def)             Requested size: 50.1866pt x 50.1866pt.
 
-<figs/tags/apriltags.png, id=83, 176.66pt x 176.66pt>
+<figs/tags/apriltags.png, id=84, 176.66pt x 176.66pt>
 File: figs/tags/apriltags.png Graphic file (type png)
 
 <use figs/tags/apriltags.png>
 Package pdftex.def Info: figs/tags/apriltags.png used on input line 8.
 (pdftex.def)             Requested size: 50.18687pt x 50.18687pt.
 
-<figs/tags/rune.png, id=84, 106.3975pt x 113.42375pt>
+<figs/tags/rune.png, id=85, 106.3975pt x 113.42375pt>
 File: figs/tags/rune.png Graphic file (type png)
  <use figs/tags/rune.png>
 Package pdftex.def Info: figs/tags/rune.png used on input line 9.
 (pdftex.def)             Requested size: 50.18866pt x 50.18697pt.
 
-<figs/tags/intersense.png, id=85, 301.125pt x 299.1175pt>
+<figs/tags/intersense.png, id=86, 301.125pt x 299.1175pt>
 File: figs/tags/intersense.png Graphic file (type png)
 
 <use figs/tags/intersense.png>
 Package pdftex.def Info: figs/tags/intersense.png used on input line 10.
 (pdftex.def)             Requested size: 50.18431pt x 50.18748pt.
-) (./sections/problem.tex
-<figs/perspective_fig.png, id=98, 627.34375pt x 396.48125pt>
+
+<figs/perspective_fig.png, id=95, 627.34375pt x 396.48125pt>
 File: figs/perspective_fig.png Graphic file (type png)
 
 <use figs/perspective_fig.png>
-Package pdftex.def Info: figs/perspective_fig.png used on input line 16.
+Package pdftex.def Info: figs/perspective_fig.png used on input line 22.
 (pdftex.def)             Requested size: 246.94499pt x 156.06691pt.
 
-<figs/simulation_rotation.png, id=99, 700.2963pt x 432.8973pt>
+<figs/simulation_rotation.png, id=96, 700.2963pt x 432.8973pt>
 File: figs/simulation_rotation.png Graphic file (type png)
 
 <use figs/simulation_rotation.png>
-Package pdftex.def Info: figs/simulation_rotation.png used on input line 23.
+Package pdftex.def Info: figs/simulation_rotation.png used on input line 30.
 (pdftex.def)             Requested size: 246.9453pt x 160.59885pt.
 
-<figs/simulation_trans.png, id=100, 685.6014pt x 398.4486pt>
+<figs/simulation_trans.png, id=97, 650.43pt x 410.4936pt>
 File: figs/simulation_trans.png Graphic file (type png)
 
 <use figs/simulation_trans.png>
-Package pdftex.def Info: figs/simulation_trans.png used on input line 25.
-(pdftex.def)             Requested size: 246.94185pt x 160.59865pt.
+Package pdftex.def Info: figs/simulation_trans.png used on input line 32.
+(pdftex.def)             Requested size: 246.9377pt x 160.59921pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2 <./figs/tags/artoolkit.png> <./figs/tags/artags.png> <./figs/tags/apriltags.
-png> <./figs/tags/rune.png (PNG copy)> <./figs/tags/intersense.png> <./figs/per
-spective_fig.png>]) (./sections/approach.tex
-Underfull \vbox (badness 2080) has occurred while \output is active []
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3 <./figs/simulation_rotation.png> <./figs/simulation_trans.png>]
+ [2 <./figs/tags/artoolkit.png> <./figs/tags/artags.png> <./figs/tags/apriltags
+.png> <./figs/tags/rune.png (PNG copy)> <./figs/tags/intersense.png> <./figs/pe
+rspective_fig.png>] (./sections/problem.tex) (./sections/approach.tex [3 <./fig
+s/simulation_rotation.png> <./figs/simulation_trans.png>]
 <figs/optimization_visualization_fig.png, id=163, 414.8298pt x 142.3719pt>
 File: figs/optimization_visualization_fig.png Graphic file (type png)
 
@@ -1123,41 +1135,41 @@ Package pdftex.def Info: figs/optimization_visualization_fig.png used on input
 line 33.
 (pdftex.def)             Requested size: 246.94499pt x 84.7525pt.
 
-<figs/rgb_result.png, id=166, 525.965pt x 366.36874pt>
+<figs/rgb_result.png, id=164, 525.965pt x 366.36874pt>
 File: figs/rgb_result.png Graphic file (type png)
 
 <use figs/rgb_result.png>
-Package pdftex.def Info: figs/rgb_result.png used on input line 62.
+Package pdftex.def Info: figs/rgb_result.png used on input line 43.
 (pdftex.def)             Requested size: 125.46371pt x 88.3272pt.
 
-<figs/rgbd_result.png, id=167, 497.86pt x 347.2975pt>
+<figs/rgbd_result.png, id=165, 497.86pt x 347.2975pt>
 File: figs/rgbd_result.png Graphic file (type png)
 
 <use figs/rgbd_result.png>
-Package pdftex.def Info: figs/rgbd_result.png used on input line 63.
+Package pdftex.def Info: figs/rgbd_result.png used on input line 44.
 (pdftex.def)             Requested size: 125.46745pt x 88.32916pt.
 
-Overfull \hbox (3.98618pt too wide) in paragraph at lines 62--64
+Overfull \hbox (3.98618pt too wide) in paragraph at lines 43--45
 [][][][] 
  []
 
-<figs/result_figs/rgb_smallfig.png, id=168, 347.2975pt x 261.97874pt>
+<figs/result_figs/rgb_smallfig.png, id=166, 347.2975pt x 261.97874pt>
 File: figs/result_figs/rgb_smallfig.png Graphic file (type png)
 
 <use figs/result_figs/rgb_smallfig.png>
-Package pdftex.def Info: figs/result_figs/rgb_smallfig.png used on input line 8
-2.
+Package pdftex.def Info: figs/result_figs/rgb_smallfig.png used on input line 5
+1.
 (pdftex.def)             Requested size: 246.9539pt x 160.6063pt.
 
-<figs/result_figs/result_0005.png, id=169, 578.16pt x 433.62pt>
+<figs/result_figs/result_0005.png, id=167, 578.16pt x 433.62pt>
 File: figs/result_figs/result_0005.png Graphic file (type png)
 
 <use figs/result_figs/result_0005.png>
-Package pdftex.def Info: figs/result_figs/result_0005.png used on input line 84
+Package pdftex.def Info: figs/result_figs/result_0005.png used on input line 53
 .
 (pdftex.def)             Requested size: 246.94542pt x 170.63953pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
+Underfull \hbox (badness 10000) in paragraph at lines 51--54
 
  []
 
@@ -1165,76 +1177,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--85
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./figs/optimization_visualization_fig.png> <./figs/rgb_result.png> <./figs/
-rgbd_result.png>]) (./sections/results.tex
-<figs/viewing_angle_fig2.png, id=193, 666.3294pt x 437.2335pt>
+rgbd_result.png>]
+<figs/viewing_angle_fig2.png, id=194, 666.3294pt x 437.2335pt>
 File: figs/viewing_angle_fig2.png Graphic file (type png)
 
 <use figs/viewing_angle_fig2.png>
-Package pdftex.def Info: figs/viewing_angle_fig2.png used on input line 9.
+Package pdftex.def Info: figs/viewing_angle_fig2.png used on input line 94.
 (pdftex.def)             Requested size: 246.9447pt x 130.49054pt.
-
-<figs/distance_fig2.png, id=194, 793.5246pt x 412.6617pt>
-File: figs/distance_fig2.png Graphic file (type png)
-
-<use figs/distance_fig2.png>
-Package pdftex.def Info: figs/distance_fig2.png used on input line 20.
-(pdftex.def)             Requested size: 246.94499pt x 128.42123pt.
- [5 <./figs/result_figs/rgb_smallfig.png (PNG copy)> <./figs/result_figs/result
-_0005.png> <./figs/viewing_angle_fig2.png>]
-<figs/illumination/dark.png, id=209, 56.21pt x 57.21375pt>
-File: figs/illumination/dark.png Graphic file (type png)
-
-<use figs/illumination/dark.png>
-Package pdftex.def Info: figs/illumination/dark.png used on input line 42.
-(pdftex.def)             Requested size: 50.1897pt x 50.18935pt.
-
-<figs/illumination/dim.png, id=210, 56.21pt x 59.22125pt>
-File: figs/illumination/dim.png Graphic file (type png)
-
-<use figs/illumination/dim.png>
-Package pdftex.def Info: figs/illumination/dim.png used on input line 43.
-(pdftex.def)             Requested size: 50.1897pt x 50.18918pt.
-
-<figs/illumination/normal.png, id=211, 56.21pt x 57.21375pt>
-File: figs/illumination/normal.png Graphic file (type png)
-
-<use figs/illumination/normal.png>
-Package pdftex.def Info: figs/illumination/normal.png used on input line 44.
-(pdftex.def)             Requested size: 50.1897pt x 50.18935pt.
-
-<figs/illumination/bright.png, id=212, 57.21375pt x 58.2175pt>
-File: figs/illumination/bright.png Graphic file (type png)
-
-<use figs/illumination/bright.png>
-Package pdftex.def Info: figs/illumination/bright.png used on input line 45.
-(pdftex.def)             Requested size: 50.18935pt x 50.18953pt.
-
-<figs/lighting_fig1.png, id=213, 578.16pt x 433.62pt>
-File: figs/lighting_fig1.png Graphic file (type png)
-
-<use figs/lighting_fig1.png>
-Package pdftex.def Info: figs/lighting_fig1.png used on input line 52.
-(pdftex.def)             Requested size: 246.94499pt x 185.20906pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figs/alvar_rot.png, id=216, 433.62pt x 554.5518pt>
-File: figs/alvar_rot.png Graphic file (type png)
- <use figs/alvar_rot.png>
-Package pdftex.def Info: figs/alvar_rot.png used on input line 65.
-(pdftex.def)             Requested size: 120.44676pt x 180.67567pt.
+) (./sections/results.tex [5 <./figs/result_figs/rgb_smallfig.png (PNG copy)> <
+./figs/result_figs/result_0005.png> <./figs/viewing_angle_fig2.png>]
+<figs/distance_fig2.png, id=206, 793.5246pt x 412.6617pt>
+File: figs/distance_fig2.png Graphic file (type png)
 
-<figs/alvar_trans.png, id=217, 433.62pt x 554.5518pt>
+<use figs/distance_fig2.png>
+Package pdftex.def Info: figs/distance_fig2.png used on input line 12.
+(pdftex.def)             Requested size: 246.94499pt x 128.42123pt.
+
+<figs/illumination/dark.png, id=210, 56.21pt x 57.21375pt>
+File: figs/illumination/dark.png Graphic file (type png)
+
+<use figs/illumination/dark.png>
+Package pdftex.def Info: figs/illumination/dark.png used on input line 25.
+(pdftex.def)             Requested size: 50.1897pt x 50.18935pt.
+
+<figs/illumination/dim.png, id=211, 56.21pt x 59.22125pt>
+File: figs/illumination/dim.png Graphic file (type png)
+
+<use figs/illumination/dim.png>
+Package pdftex.def Info: figs/illumination/dim.png used on input line 26.
+(pdftex.def)             Requested size: 50.1897pt x 50.18918pt.
+
+<figs/illumination/normal.png, id=212, 56.21pt x 57.21375pt>
+File: figs/illumination/normal.png Graphic file (type png)
+
+<use figs/illumination/normal.png>
+Package pdftex.def Info: figs/illumination/normal.png used on input line 27.
+(pdftex.def)             Requested size: 50.1897pt x 50.18935pt.
+
+<figs/illumination/bright.png, id=213, 57.21375pt x 58.2175pt>
+File: figs/illumination/bright.png Graphic file (type png)
+
+<use figs/illumination/bright.png>
+Package pdftex.def Info: figs/illumination/bright.png used on input line 28.
+(pdftex.def)             Requested size: 50.18935pt x 50.18953pt.
+
+<figs/lighting_fig1.png, id=214, 578.16pt x 433.62pt>
+File: figs/lighting_fig1.png Graphic file (type png)
+
+<use figs/lighting_fig1.png>
+Package pdftex.def Info: figs/lighting_fig1.png used on input line 35.
+(pdftex.def)             Requested size: 246.94499pt x 185.20906pt.
+ [6 <./figs/distance_fig2.png> <./figs/illumination/dark.png (PNG copy)> <./fig
+s/illumination/dim.png (PNG copy)> <./figs/illumination/normal.png (PNG copy)> 
+<./figs/illumination/bright.png (PNG copy)> <./figs/lighting_fig1.png>] <figs/a
+lvar_rot.png, id=231, 433.62pt x 554.5518pt>
+File: figs/alvar_rot.png Graphic file (type png)
+
+<use figs/alvar_rot.png>
+Package pdftex.def Info: figs/alvar_rot.png used on input line 57.
+(pdftex.def)             Requested size: 120.44676pt x 180.67567pt.
+ <figs/alvar_trans.png, id=232, 433.62pt x 554.5518pt>
 File: figs/alvar_trans.png Graphic file (type png)
 
 <use figs/alvar_trans.png>
-Package pdftex.def Info: figs/alvar_trans.png used on input line 66.
+Package pdftex.def Info: figs/alvar_trans.png used on input line 58.
 (pdftex.def)             Requested size: 120.44676pt x 180.67567pt.
- [6 <./figs/distance_fig2.png> <./figs/illumination/dark.png (PNG copy)> <./fig
-s/illumination/dim.png (PNG copy)> <./figs/illumination/normal.png (PNG copy)> 
-<./figs/illumination/bright.png (PNG copy)> <./figs/lighting_fig1.png>]) (./sec
-tions/conclusion.tex) (./main.bbl
+) (./sections/conclusion.tex) (./main.bbl
 Underfull \hbox (badness 1681) in paragraph at lines 4--7
 \T1/ptm/m/it/8 Na-tional Re-search Coun-cil Canada, Pub-li-ca-tion Num-ber: NRC
 \T1/ptm/m/n/8 ,
@@ -1291,14 +1303,14 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
-Extra height:13.55556pt when 624.05798pt
-Extra height:0.0pt when 625.05798pt
-(2)Left:625.05798pt Right:620.64043pt Output:625.05798pt
+Extra height:13.55556pt when 679.63297pt
+Extra height:0.0pt when 680.63297pt
+(2)Left:680.63297pt Right:669.62547pt Output:680.63297pt
 - LAST -
 Extra skip:0.0pt
-Left:625.05798pt
-Right:620.64043pt
-Output:625.05798pt
+Left:680.63297pt
+Right:669.62547pt
+Output:680.63297pt
 [7 <./figs/alvar_rot.png> <./figs/alvar_trans.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
  (./main.aux)
@@ -1313,13 +1325,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
- 11131 strings out of 493304
- 166241 string characters out of 6139872
- 287869 words of memory out of 5000000
- 14287 multiletter control sequences out of 15000+600000
+ 11138 strings out of 493304
+ 166371 string characters out of 6139872
+ 290243 words of memory out of 5000000
+ 14292 multiletter control sequences out of 15000+600000
  119512 words of font info for 153 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,11n,47p,1886b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,47p,1820b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/
@@ -1341,9 +1353,9 @@ ts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 2256745 bytes).
+Output written on main.pdf (7 pages, 2368824 bytes).
 PDF statistics:
- 333 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 335 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
+ 238 words of extra memory for PDF output out of 10000 (max. 10000000)
 

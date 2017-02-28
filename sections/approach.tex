@@ -38,6 +38,23 @@ An important result we used from \citep{pathak2010uncertainty} is the covariance
 \subsection{Initial Pose Estimation}
 The 6 DOF pose of the tag can be described as the transformation $[R, \boldsymbol{t}]$ aligning the tag frame's coordinate system and the sensory frame's coordinate system of the robot. The depth plane $D [ \boldsymbol{\hat{n}}, d]$ alone is insufficient to determine the transformation as it only defines 3 DOF. Since the depth plane was computed base on the approximate center of the tag, we can use the center of the tag and center of the plane as a pair point correspondence. However, there are still infinite number of valid poses rotating about the normal $\boldsymbol{\hat{n}}$. One solution is to constrain the pose by using a corner as an extra point correspondence to solve for the optimal rotation. In practice, the accuracy of this method largely depends on the depth accuracy of the chosen corner point. 
 
+
+\begin{figure}
+\subfloat[RGB]{\includegraphics[width=125px, height=88px]{figs/rgb_result}}
+\subfloat[RGBD]{\includegraphics[width=125px, height=88px]{figs/rgbd_result}}
+\caption{The pose of the Apriltag visualized in RViz computed using the original library VS our RGBD fused method.}
+\label{fig:result_compare}
+\end{figure}
+
+\begin{figure*}[h]
+\subfloat[RGB image at 60$^{\circ}$]{\includegraphics[width=\columnwidth, height=160px]{figs/result_figs/rgb_smallfig}
+\label{fig:exp_setup}}
+\subfloat[Rotation errors across 1000 trials]{\includegraphics[width=\columnwidth, height=170px]{figs/result_figs/result_0005}
+\label{fig:bimodal}} \\
+\caption{An example of the experimental setup in \ref{fig:exp_setup}. Groundtruth is computed from a large chessboard where the relative transformation to the tag is known. Each data collection, shown in \ref{fig:bimodal}, is ran through $1000$ trails and pose errors are measured.}
+\label{fig:angle_result}
+\end{figure*}
+
 An alternative is to use all 4 detected corners as 4 pairs of point correspondences for the optimization. We projected the detected corners onto $D [ \boldsymbol{\hat{n}}, d]$ to get the coordinates $\boldsymbol{p} = [p_1, p_2, p_3, p_4]$ in the robot sensory frame. The corner coordinates $\boldsymbol{q} = [q_1, q_2, q_3, q_4]$ in the tag frame can be easily calculated since the tag is a square plane. We define the center of the tag as the origin, and the coordinates are simply the location of the corners on a Cartesian plane. Given these two sets of 3D point correspondences, the pose can be computed as a rigid body transformation estimation. Solving for the optimal transformation $[R, \boldsymbol{t}]$ requires minimizing a least squares error objective function given by:
 \begin{IEEEeqnarray}{c}
 [R, \boldsymbol{t}] = \argmin _{R \in SO(3), \boldsymbol{t}\in \mathbb{R}^3} \sum_{i=1}^{n} w_i \| R \boldsymbol{q_i} + \boldsymbol{t} - \boldsymbol{p_i}\| ^2
@@ -54,16 +71,9 @@ p_{c}^{\top}q_c &= U\Sigma V^\top \\
 R & = VU^\top\\
 \boldsymbol{t} & = \bar{q} - R\bar{p}
 \end{IEEEeqnarray}
-$R$ and $t$ are the corresponding rotation and translation components of the the transformation. The above approach minimizes the least square error of the transformation and it is robust to small errors in the correspondences. The resulting pose obtained from the range data, although not accurate, provide a good approximation for the true pose. 
+Here, $R$ and $t$ are the corresponding rotation and translation components of the the transformation. The above approach minimizes the least square error of the transformation and it is robust to small errors in the correspondences. The resulting pose obtained from the range data, although not accurate, provide a good approximation for the true pose. 
 
 \subsection{Pose Refinement}
-
-\begin{figure}
-\subfloat[RGB]{\includegraphics[width=125px, height=88px]{figs/rgb_result}}
-\subfloat[RGBD]{\includegraphics[width=125px, height=88px]{figs/rgbd_result}}
-\caption{The pose of the Apriltag visualized in RViz computed using the original library VS our RGBD fused method.}
-\label{fig:result_compare}
-\end{figure}
 
 Lastly, the pose is refined by minimizing the reprojection error using the initial pose estimated from the previous step. The camera is assumed to be calibrated and the camera projection model $K$ is known. We denote $R^*$ and $\boldsymbol{t^{*}}$ to be the optimal pose in the constrained optimization function
 \begin{IEEEeqnarray*}{rCl}
@@ -76,17 +86,14 @@ R^* & = & R (\Delta R) \IEEEyesnumber \\
 \label{eq:refinement}
 \end{IEEEeqnarray*}
 
-
-\begin{figure*}[h]
-\subfloat[RGB image at 60$^{\circ}$]{\includegraphics[width=\columnwidth, height=160px]{figs/result_figs/rgb_smallfig}
-\label{fig:exp_setup}}
-\subfloat[Rotation errors across 1000 trials]{\includegraphics[width=\columnwidth, height=170px]{figs/result_figs/result_0005}
-\label{fig:bimodal}} \\
-\caption{An example of the experimental setup in \ref{fig:exp_setup}. Groundtruth is computed from a large chessboard where the relative transformation to the tag is known. Each data collection, shown in \ref{fig:bimodal}, is ran through $1000$ trails and pose errors are measured.}
-\label{fig:angle_result}
-\end{figure*}
-
-
 Intuitively, the most optimal pose is the one with minimal reprojection error in the RGB space and align with the plane in the depth space. Therefore, the goal of the optimization is to find the local minimum closest to the initial estimation within allowable region $\Gamma$ as illustrated with Figure \ref{fig:optimization}. The key challenge is to determine the constrained region $\Gamma_R$ and $\Gamma_t$ such that it include a locally optimal pose and exclude the ambiguous pose. In most cases where the depth plane yields a good fit, this region should be small because the optimal pose is close to the initial estimate. When the depth sensor is noisy, the $\Gamma$ increases since the initial estimate might be far off. Thus, the constrained region $\Gamma$ is defined by the uncertainty in the initial estimate and it is characterized by the covariance of the plane parameters. In implementation, we used a trust-region optimization algorithm to bound the constraints. The scaling parameters for the covariance is empirically test to obtain the best results for our robot. 
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth, height=130px]{figs/viewing_angle_fig2}
+\caption{Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.}
+\label{fig:viewing_result}
+\end{figure}
 
 The strength of this method is that it harness the benefits of RGB and depth information without explicitly assuming their relative accuracy. One advantage of RGBD sensors is that the camera and the depth sensor often work optimally with different constraints. In the example of Kinect, the RGB camera is sensitive to lighting and works poorly in scenes with low illumination. However, the time of flight depth sensor are unaffected by such a problem. On the hand, the time of flight sensor yield poor range results on surface edges, but the RGB camera works exceptionally well with edges where there is a high color contrast. 

@@ -1,0 +1,12 @@
+close all;
+name = {'2 lux'; '43 lux'; '90 lux'; '243 lux'};
+rgb = [0.24, 0.13, 0.03, 0.02; 
+       0.03, 0.01, 0.0, 0.0]';
+x = 1:4;
+b = bar(x, rgb, 1);
+b(1).FaceColor = 'red';
+b(2).FaceColor = 'blue';
+set(gca, 'xticklabel', name);
+legend('RGB','RGBD');
+xlabel('Lighting', 'FontSize', 13);
+ylabel('Error Percentage', 'FontSize', 13);
