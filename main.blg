@@ -3,47 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: ieeetr.bst
 Database file #1: bib/references.bib
-Warning--entry type for "alvartrack" isn't style-file defined
---line 187 of file bib/references.bib
-You've used 19 entries,
+Warning--empty booktitle in alvartrack
+Warning--empty year in alvartrack
+You've used 20 entries,
             1876 wiz_defined-function locations,
-            598 strings with 6932 characters,
-and the built_in function-call counts, 6059 in all, are:
-= -- 646
-> -- 166
+            604 strings with 7202 characters,
+and the built_in function-call counts, 6452 in all, are:
+= -- 683
+> -- 177
 < -- 0
-+ -- 63
-- -- 44
-* -- 398
-:= -- 786
-add.period$ -- 19
-call.type$ -- 19
-change.case$ -- 18
++ -- 67
+- -- 47
+* -- 428
+:= -- 835
+add.period$ -- 20
+call.type$ -- 20
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 330
-empty$ -- 590
-format.name$ -- 44
-if$ -- 1514
+cite$ -- 22
+duplicate$ -- 359
+empty$ -- 631
+format.name$ -- 47
+if$ -- 1609
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 19
-newline$ -- 61
-num.names$ -- 19
-pop$ -- 66
+int.to.str$ -- 20
+missing$ -- 21
+newline$ -- 64
+num.names$ -- 20
+pop$ -- 77
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 260
+skip$ -- 269
 stack$ -- 0
-substring$ -- 520
-swap$ -- 154
+substring$ -- 552
+swap$ -- 163
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 68
-width$ -- 21
-write$ -- 195
-(There was 1 warning)
+warning$ -- 2
+while$ -- 72
+width$ -- 22
+write$ -- 205
+(There were 2 warnings)

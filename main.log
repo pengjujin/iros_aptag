@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.6)  28 FEB 2017 13:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.2.6)  28 FEB 2017 19:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1028,23 +1028,23 @@ File: figs/table_clearing_rgb_small.png Graphic file (type png)
 
 <use figs/table_clearing_rgb_small.png>
 Package pdftex.def Info: figs/table_clearing_rgb_small.png used on input line 1
-0.
-(pdftex.def)             Requested size: 246.93686pt x 120.4495pt.
+1.
+(pdftex.def)             Requested size: 246.94499pt x 118.81274pt.
 
 <figs/table_clearing_depth.png, id=64, 568.1225pt x 256.96pt>
 File: figs/table_clearing_depth.png Graphic file (type png)
 
 <use figs/table_clearing_depth.png>
-Package pdftex.def Info: figs/table_clearing_depth.png used on input line 11.
-(pdftex.def)             Requested size: 246.94923pt x 120.44969pt.
+Package pdftex.def Info: figs/table_clearing_depth.png used on input line 12.
+(pdftex.def)             Requested size: 246.94499pt x 111.69435pt.
 
 <figs/pipeline.png, id=65, 994.71625pt x 472.76625pt>
 File: figs/pipeline.png Graphic file (type png)
  <use figs/pipeline.png>
-Package pdftex.def Info: figs/pipeline.png used on input line 17.
+Package pdftex.def Info: figs/pipeline.png used on input line 18.
 (pdftex.def)             Requested size: 246.94499pt x 117.36168pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
@@ -1053,11 +1053,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  <./figs/table_clearing_rgb_small.png> <./figs/table_clearing_depth.png> <./fig
 s/pipeline.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1102,7 +1102,7 @@ File: figs/perspective_fig.png Graphic file (type png)
 
 <use figs/perspective_fig.png>
 Package pdftex.def Info: figs/perspective_fig.png used on input line 22.
-(pdftex.def)             Requested size: 246.94499pt x 156.06691pt.
+(pdftex.def)             Requested size: 200.75409pt x 130.48831pt.
 
 <figs/simulation_rotation.png, id=97, 700.2963pt x 432.8973pt>
 File: figs/simulation_rotation.png Graphic file (type png)
@@ -1121,14 +1121,11 @@ Package pdftex.def Info: figs/simulation_trans.png used on input line 32.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)
-Underfull \vbox (badness 4341) has occurred while \output is active []
-
- [2 <./figs/tags/artoolkit.png> <./figs/tags/artags.png> <./figs/tags/apriltags
-.png> <./figs/tags/rune.png (PNG copy)> <./figs/tags/intersense.png> <./figs/pe
-rspective_fig.png>] (./sections/problem.tex) (./sections/approach.tex [3 <./fig
-s/simulation_rotation.png> <./figs/simulation_trans.png>]
-<figs/optimization_visualization_fig.png, id=162, 414.8298pt x 142.3719pt>
+) [2 <./figs/tags/artoolkit.png> <./figs/tags/artags.png> <./figs/tags/apriltag
+s.png> <./figs/tags/rune.png (PNG copy)> <./figs/tags/intersense.png> <./figs/p
+erspective_fig.png>] (./sections/problem.tex) (./sections/approach.tex [3 <./fi
+gs/simulation_rotation.png> <./figs/simulation_trans.png>]
+<figs/optimization_visualization_fig.png, id=163, 414.8298pt x 142.3719pt>
 File: figs/optimization_visualization_fig.png Graphic file (type png)
 
 <use figs/optimization_visualization_fig.png>
@@ -1136,14 +1133,14 @@ Package pdftex.def Info: figs/optimization_visualization_fig.png used on input
 line 33.
 (pdftex.def)             Requested size: 246.94499pt x 84.7525pt.
 
-<figs/rgb_result.png, id=163, 525.965pt x 366.36874pt>
+<figs/rgb_result.png, id=164, 525.965pt x 366.36874pt>
 File: figs/rgb_result.png Graphic file (type png)
 
 <use figs/rgb_result.png>
 Package pdftex.def Info: figs/rgb_result.png used on input line 43.
 (pdftex.def)             Requested size: 125.46371pt x 88.3272pt.
 
-<figs/rgbd_result.png, id=164, 497.86pt x 347.2975pt>
+<figs/rgbd_result.png, id=165, 497.86pt x 347.2975pt>
 File: figs/rgbd_result.png Graphic file (type png)
 
 <use figs/rgbd_result.png>
@@ -1154,7 +1151,7 @@ Overfull \hbox (3.98618pt too wide) in paragraph at lines 43--45
 [][][][] 
  []
 
-<figs/result_figs/rgb_smallfig.png, id=165, 347.2975pt x 261.97874pt>
+<figs/result_figs/rgb_smallfig.png, id=166, 347.2975pt x 261.97874pt>
 File: figs/result_figs/rgb_smallfig.png Graphic file (type png)
 
 <use figs/result_figs/rgb_smallfig.png>
@@ -1162,7 +1159,7 @@ Package pdftex.def Info: figs/result_figs/rgb_smallfig.png used on input line 5
 1.
 (pdftex.def)             Requested size: 246.9539pt x 160.6063pt.
 
-<figs/result_figs/result_0005.png, id=166, 578.16pt x 433.62pt>
+<figs/result_figs/result_0005.png, id=167, 578.16pt x 433.62pt>
 File: figs/result_figs/result_0005.png Graphic file (type png)
 
 <use figs/result_figs/result_0005.png>
@@ -1179,114 +1176,75 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./figs/optimization_visualization_fig.png> <./figs/rgb_result.png> <./figs/
 rgbd_result.png>]
-<figs/viewing_angle_fig2.png, id=195, 666.3294pt x 437.2335pt>
+<figs/viewing_angle_fig2.png, id=198, 666.3294pt x 437.2335pt>
 File: figs/viewing_angle_fig2.png Graphic file (type png)
 
 <use figs/viewing_angle_fig2.png>
 Package pdftex.def Info: figs/viewing_angle_fig2.png used on input line 94.
-(pdftex.def)             Requested size: 246.9447pt x 130.49054pt.
+(pdftex.def)             Requested size: 220.82477pt x 130.49054pt.
 ) (./sections/results.tex [5 <./figs/result_figs/rgb_smallfig.png (PNG copy)> <
 ./figs/result_figs/result_0005.png> <./figs/viewing_angle_fig2.png>]
-<figs/distance_fig2.png, id=207, 793.5246pt x 412.6617pt>
+<figs/distance_fig2.png, id=210, 793.5246pt x 412.6617pt>
 File: figs/distance_fig2.png Graphic file (type png)
 
 <use figs/distance_fig2.png>
 Package pdftex.def Info: figs/distance_fig2.png used on input line 12.
 (pdftex.def)             Requested size: 246.94499pt x 128.42123pt.
 
-<figs/illumination/dark.png, id=211, 56.21pt x 57.21375pt>
+<figs/illumination/dark.png, id=214, 56.21pt x 57.21375pt>
 File: figs/illumination/dark.png Graphic file (type png)
 
 <use figs/illumination/dark.png>
-Package pdftex.def Info: figs/illumination/dark.png used on input line 25.
+Package pdftex.def Info: figs/illumination/dark.png used on input line 26.
 (pdftex.def)             Requested size: 50.1897pt x 50.18935pt.
 
-<figs/illumination/dim.png, id=212, 56.21pt x 59.22125pt>
+<figs/illumination/dim.png, id=215, 56.21pt x 59.22125pt>
 File: figs/illumination/dim.png Graphic file (type png)
 
 <use figs/illumination/dim.png>
-Package pdftex.def Info: figs/illumination/dim.png used on input line 26.
+Package pdftex.def Info: figs/illumination/dim.png used on input line 28.
 (pdftex.def)             Requested size: 50.1897pt x 50.18918pt.
 
-<figs/illumination/normal.png, id=213, 56.21pt x 57.21375pt>
+<figs/illumination/normal.png, id=216, 56.21pt x 57.21375pt>
 File: figs/illumination/normal.png Graphic file (type png)
 
 <use figs/illumination/normal.png>
-Package pdftex.def Info: figs/illumination/normal.png used on input line 27.
+Package pdftex.def Info: figs/illumination/normal.png used on input line 30.
 (pdftex.def)             Requested size: 50.1897pt x 50.18935pt.
 
-<figs/illumination/bright.png, id=214, 57.21375pt x 58.2175pt>
+<figs/illumination/bright.png, id=217, 57.21375pt x 58.2175pt>
 File: figs/illumination/bright.png Graphic file (type png)
 
 <use figs/illumination/bright.png>
-Package pdftex.def Info: figs/illumination/bright.png used on input line 28.
+Package pdftex.def Info: figs/illumination/bright.png used on input line 32.
 (pdftex.def)             Requested size: 50.18935pt x 50.18953pt.
 
-<figs/lighting_fig1.png, id=215, 578.16pt x 433.62pt>
+<figs/lighting_fig1.png, id=222, 578.16pt x 433.62pt>
 File: figs/lighting_fig1.png Graphic file (type png)
 
 <use figs/lighting_fig1.png>
-Package pdftex.def Info: figs/lighting_fig1.png used on input line 35.
+Package pdftex.def Info: figs/lighting_fig1.png used on input line 39.
 (pdftex.def)             Requested size: 246.94499pt x 185.20906pt.
  [6 <./figs/distance_fig2.png> <./figs/illumination/dark.png (PNG copy)> <./fig
 s/illumination/dim.png (PNG copy)> <./figs/illumination/normal.png (PNG copy)> 
 <./figs/illumination/bright.png (PNG copy)> <./figs/lighting_fig1.png>] <figs/a
-lvar_rot.png, id=232, 433.62pt x 554.5518pt>
+lvar_rot.png, id=239, 433.62pt x 554.5518pt>
 File: figs/alvar_rot.png Graphic file (type png)
 
 <use figs/alvar_rot.png>
-Package pdftex.def Info: figs/alvar_rot.png used on input line 57.
+Package pdftex.def Info: figs/alvar_rot.png used on input line 61.
 (pdftex.def)             Requested size: 120.44676pt x 180.67567pt.
- <figs/alvar_trans.png, id=233, 433.62pt x 554.5518pt>
+ <figs/alvar_trans.png, id=240, 433.62pt x 554.5518pt>
 File: figs/alvar_trans.png Graphic file (type png)
 
 <use figs/alvar_trans.png>
-Package pdftex.def Info: figs/alvar_trans.png used on input line 58.
+Package pdftex.def Info: figs/alvar_trans.png used on input line 62.
 (pdftex.def)             Requested size: 120.44676pt x 180.67567pt.
 ) (./sections/conclusion.tex) (./main.bbl
 Underfull \hbox (badness 1681) in paragraph at lines 4--7
 \T1/ptm/m/it/8 Na-tional Re-search Coun-cil Canada, Pub-li-ca-tion Num-ber: NRC
 \T1/ptm/m/n/8 ,
  []
-
-[7 <./figs/alvar_rot.png> <./figs/alvar_trans.png>]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.95 S.~Niekum, ``ar_
-                     track_alvar ros package.''
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.96 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.96 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.96 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
 )
 
@@ -1301,44 +1259,16 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:12.0pt when 26.27777pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:12.0pt when 27.27777pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:12.0pt when 28.27777pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:12.0pt when 29.27777pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:0.0pt when 30.27777pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-(2)Left:30.27777pt Right:25.55556pt Output:30.27777pt
+Extra height:0.0pt when 677.09613pt
+(2)Left:677.09613pt Right:666.65189pt Output:677.09613pt
 - LAST -
 Extra skip:0.0pt
-Left:30.27777pt
-Right:25.55556pt
-Output:30.27777pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8
-
-]
+Left:677.09613pt
+Right:666.65189pt
+Output:677.09613pt
+[7 <./figs/alvar_rot.png> <./figs/alvar_trans.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
-
-(./main.aux)
+ (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -1350,37 +1280,35 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
- 11139 strings out of 493304
- 166377 string characters out of 6139872
- 271176 words of memory out of 5000000
- 14292 multiletter control sequences out of 15000+600000
+ 11151 strings out of 493304
+ 166591 string characters out of 6139872
+ 291602 words of memory out of 5000000
+ 14304 multiletter control sequences out of 15000+600000
  119512 words of font info for 153 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,11n,47p,1820b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,47p,1820b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmex
-tra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/mathabx-type1/mathx10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
-s/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 2370078 bytes).
+type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (7 pages, 2355383 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
+ 337 PDF objects out of 1000 (max. 8388607)
  73 named destinations out of 1000 (max. 500000)
  238 words of extra memory for PDF output out of 10000 (max. 10000000)
 

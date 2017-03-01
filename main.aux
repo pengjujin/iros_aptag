@@ -65,17 +65,18 @@
 \newlabel{sec:approach}{{IV}{3}{Approach}{section.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Depth Plane Fitting}{3}{subsection.4.1}}
 \citation{pathak2010uncertainty}
+\citation{nguyen2012modeling}
 \citation{pathak2010uncertainty}
 \citation{eggert1997estimating}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces An abstract visualization of the optimization constraints. The blue curve is the initial pose estimation obtained from the depth plane. The red curves are the ambiguous poses from the RGB image. We constrained the region of optimization based on how well we fit the depth plane.\relax }}{4}{figure.caption.6}}
 \newlabel{fig:optimization}{{6}{4}{An abstract visualization of the optimization constraints. The blue curve is the initial pose estimation obtained from the depth plane. The red curves are the ambiguous poses from the RGB image. We constrained the region of optimization based on how well we fit the depth plane.\relax }{figure.caption.6}{}}
 \newlabel{eq:gaussian_noise}{{1}{4}{Depth Plane Fitting}{subsection.4.1}{}}
 \newlabel{eq:gaussian_noise}{{2}{4}{Depth Plane Fitting}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Initial Pose Estimation}{4}{subsection.4.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The pose of the Apriltag visualized in RViz computed using the original library VS our RGBD fused method.\relax }}{4}{figure.caption.7}}
 \newlabel{fig:result_compare}{{7}{4}{The pose of the Apriltag visualized in RViz computed using the original library VS our RGBD fused method.\relax }{figure.caption.7}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {RGB}}}{4}{subfigure.7.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {RGBD}}}{4}{subfigure.7.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Initial Pose Estimation}{4}{subsection.4.2}}
 \newlabel{eq:rigid_body}{{3}{4}{Initial Pose Estimation}{figure.caption.8}{}}
 \newlabel{fig:exp_setup}{{8a}{5}{Subfigure 8a}{subfigure.8.1}{}}
 \newlabel{sub@fig:exp_setup}{{(a)}{a}{Subfigure 8a\relax }{subfigure.8.1}{}}
@@ -86,7 +87,8 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {RGB image at 60$^{\circ }$}}}{5}{subfigure.8.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Rotation errors across 1000 trials}}}{5}{subfigure.8.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Pose Refinement}{5}{subsection.4.3}}
-\newlabel{eq:refinement}{{14}{5}{Pose Refinement}{subsection.4.3}{}}
+\newlabel{eq:reprojection}{{10}{5}{Pose Refinement}{subsection.4.3}{}}
+\newlabel{eq:refinement}{{13}{5}{Pose Refinement}{subsection.4.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.\relax }}{5}{figure.caption.9}}
 \newlabel{fig:viewing_result}{{9}{5}{Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.\relax }{figure.caption.9}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Experimental Results}{5}{section.5}}
@@ -94,8 +96,16 @@
 \newlabel{fig:distance_result}{{10}{6}{Distance vs Error Percentage. Data are captured at a $10$ cm increment from $65$ cm to $185$ cm.\relax }{figure.caption.10}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Viewing Angle}{6}{subsection.5.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Distance}{6}{subsection.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Apriltags captured by Kinect V2 under different levels of illumination. The RGB sensor dynamically adjust the exposure time to compensate for low lighting. In (a), the image is captured outside of Kinect's adjustable range and the pixels are underexposed. In (b), the long exposure time introduced noticeable noise to the image. \relax }}{6}{figure.caption.11}}
-\newlabel{fig:illumination_tag}{{11}{6}{Apriltags captured by Kinect V2 under different levels of illumination. The RGB sensor dynamically adjust the exposure time to compensate for low lighting. In (a), the image is captured outside of Kinect's adjustable range and the pixels are underexposed. In (b), the long exposure time introduced noticeable noise to the image. \relax }{figure.caption.11}{}}
+\newlabel{fig:dark}{{11a}{6}{Subfigure 11a}{subfigure.11.1}{}}
+\newlabel{sub@fig:dark}{{(a)}{a}{Subfigure 11a\relax }{subfigure.11.1}{}}
+\newlabel{fig:dim}{{11b}{6}{Subfigure 11b}{subfigure.11.2}{}}
+\newlabel{sub@fig:dim}{{(b)}{b}{Subfigure 11b\relax }{subfigure.11.2}{}}
+\newlabel{fig:normal}{{11c}{6}{Subfigure 11c}{subfigure.11.3}{}}
+\newlabel{sub@fig:normal}{{(c)}{c}{Subfigure 11c\relax }{subfigure.11.3}{}}
+\newlabel{fig:bright}{{11d}{6}{Subfigure 11d}{subfigure.11.4}{}}
+\newlabel{sub@fig:bright}{{(d)}{d}{Subfigure 11d\relax }{subfigure.11.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Apriltags captured by Kinect V2 under different levels of illumination. The RGB sensor dynamically adjust the exposure time to compensate for low lighting. In \ref  {fig:dark}, the image is captured outside of Kinect's adjustable range and the pixels are underexposed. In \ref  {fig:dim}, the long exposure time introduced noticeable noise to the image. \relax }}{6}{figure.caption.11}}
+\newlabel{fig:illumination_tag}{{11}{6}{Apriltags captured by Kinect V2 under different levels of illumination. The RGB sensor dynamically adjust the exposure time to compensate for low lighting. In \ref {fig:dark}, the image is captured outside of Kinect's adjustable range and the pixels are underexposed. In \ref {fig:dim}, the long exposure time introduced noticeable noise to the image. \relax }{figure.caption.11}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Dark}}}{6}{subfigure.11.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Dim}}}{6}{subfigure.11.2}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Normal}}}{6}{subfigure.11.3}}
@@ -123,14 +133,15 @@
 \bibcite{haralick1994review}{{15}{}{{}}{{}}}
 \bibcite{horaud1989analytic}{{16}{}{{}}{{}}}
 \bibcite{pathak2010uncertainty}{{17}{}{{}}{{}}}
-\bibcite{eggert1997estimating}{{18}{}{{}}{{}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Average pose errors compared with ar\_track\_alvar package.\relax }}{7}{figure.caption.13}}
-\newlabel{fig:alvartrack}{{13}{7}{Average pose errors compared with ar\_track\_alvar package.\relax }{figure.caption.13}{}}
+\bibcite{nguyen2012modeling}{{18}{}{{}}{{}}}
+\bibcite{eggert1997estimating}{{19}{}{{}}{{}}}
+\bibcite{alvartrack}{{20}{}{{}}{{}}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Average pose errors compared with \textit  {ar\_track\_alvar} package.\relax }}{7}{figure.caption.13}}
+\newlabel{fig:alvartrack}{{13}{7}{Average pose errors compared with \textit {ar\_track\_alvar} package.\relax }{figure.caption.13}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Rotation Error}}}{7}{subfigure.13.1}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Translation Error}}}{7}{subfigure.13.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Benchmark Against ar\_track\_alvar}{7}{subsection.5.4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-E}}Computation Time}{7}{subsection.5.5}}
 \@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{7}{section.6}}
 \newlabel{sec:conclusion}{{VI}{7}{Conclusion}{section.6}{}}
-\bibcite{alvartrack}{{19}{}{{}}{{}}}
-\providecommand\NAT@force@numbers{}\NAT@force@numbers

@@ -22,11 +22,15 @@ The empirical result in Figure \ref{fig:bimodal} show a very clear bimodal distr
 
 \begin{figure}
 \centering
-\subfloat[Dark]{\includegraphics[width=50px, height=50px]{figs/illumination/dark}}
-\subfloat[Dim]{\includegraphics[width=50px, height=50px]{figs/illumination/dim}}
-\subfloat[Normal]{\includegraphics[width=50px, height=50px]{figs/illumination/normal}}
-\subfloat[Bright]{\includegraphics[width=50px, height=50px]{figs/illumination/bright}}
-\caption{Apriltags captured by Kinect V2 under different levels of illumination. The RGB sensor dynamically adjust the exposure time to compensate for low lighting. In (a), the image is captured outside of Kinect's adjustable range and the pixels are underexposed. In (b), the long exposure time introduced noticeable noise to the image. }
+\subfloat[Dark]{\includegraphics[width=50px, height=50px]{figs/illumination/dark}
+\label{fig:dark}}
+\subfloat[Dim]{\includegraphics[width=50px, height=50px]{figs/illumination/dim}
+\label{fig:dim}}
+\subfloat[Normal]{\includegraphics[width=50px, height=50px]{figs/illumination/normal}
+\label{fig:normal}}
+\subfloat[Bright]{\includegraphics[width=50px, height=50px]{figs/illumination/bright}
+\label{fig:bright}}
+\caption{Apriltags captured by Kinect V2 under different levels of illumination. The RGB sensor dynamically adjust the exposure time to compensate for low lighting. In \ref{fig:dark}, the image is captured outside of Kinect's adjustable range and the pixels are underexposed. In \ref{fig:dim}, the long exposure time introduced noticeable noise to the image. }
 \label{fig:illumination_tag}
 \end{figure}
 
@@ -56,15 +60,13 @@ We also tested the algorithm under harsh lighting conditions in a real world set
 \centering
 \subfloat[Rotation Error]{\includegraphics[width=120px, height=180px]{figs/alvar_rot}}
 \subfloat[Translation Error]{\includegraphics[width=120px, height=180px]{figs/alvar_trans}}
-\caption{Average pose errors compared with ar\_track\_alvar package.}
+\caption{Average pose errors compared with \textit{ar\_track\_alvar} package.}
 \label{fig:alvartrack}
 \end{figure}
 
-ar\_track\_alvar is a ROS wrapper package for Alvar \citep{alvartrack}, an open source AR tag tracking library. The package is designed for AR tag detection and pose estimation for robots similar to Apriltags. In particular, it implements a module where depth sensor is integrated to improve the pose estimation. The package use the detected corner points to extract a patch of point clouds containing the tag. Then it proceed to fit a plane of the point cloud data and find its centroid using PCL. The pose of the tag is computed by aligning the centroid with the center of the tag.   
+\textit{ar\_track\_alvar} is a ROS wrapper package for Alvar \citep{alvartrack}, an open source AR tag tracking library. The package is designed for AR tag detection and pose estimation for robots similar to Apriltags. In particular, it implements a module where depth sensor is integrated to improve the pose estimation. The package use the detected corner points to extract a patch of point clouds containing the tag. Then it proceed to fit a plane of the point cloud data and find its centroid using PCL. The pose of the tag is computed by aligning the centroid with the center of the tag.   
 
 We implemented a similar module for the Apriltag and compared the pose accuracy between our proposed method and the module using all the collected data. The results are shown in Figure \ref{fig:alvartrack}. The two algorithms performed similarly in rotation error, but the proposed method was on average $2$ cm better with the position component. The spread of error is also much smaller for the position component indicating that our purposed method is more consistent.
 
 \subsection{Computation Time}
 We briefly tested the computation time of the new algorithm. With our current implementation in Python, the additional computation time for sensor fusing process is ~$11$ ms. Therefore the entire detection pipeline can process a $960$ x $540$ image within $35$ ms. All tag detectors and the fusing process were running in a single-threaded mode of an Intel core. Since our sensory updates at roughly $35Hz$, the entire pipeline can process the tags and estimate the pose in near real time. There is no significant time increase on a higher resolution image for the fusing process because our algorithm does not need to process the entire image.
-
-The most time consuming step is running the trust region optimization for refining the pose. This process can be sped up significantly by simply implementing the pipeline in C++.

@@ -8,9 +8,9 @@ There are three distinct components to this method. First, we find the plane in 
 \subsection{Depth Plane Fitting}
 The first step is to extract the plane which the tag is laying on. We assume that the RGBD sensor is calibrated such that depth and RGB streams are registered to the same frame. The rectangular patch of points in the depth image bounded by the approximated corner pixels $\boldsymbol{y} = [y_1, y_2, y_3, y_4]$ contains the range information of all the points on the tag. Here we take advantage of the planar characteristic of the tag. By fitting a plane over the range data, we can constrain the pose of the tag to be on the plane.
 
-The raw range data retrieved from the depth sensors are generally noisy. The borders and dark regions of the tag produce unreliable range data and artifacts due to a weakness of our depth sensors (time of flight sensor from Kinect V2). Therefore, we first filter the data by removing points too far from the median before fitting the plane. Nevertheless, the remaining points could have a large variance depending on the lighting condition and the magnitude of the in-plane rotation. The accuracy of the plane fit and initial pose estimation is directly affected by the noise level of data. We will characterize the uncertainty of the plane fit and adjust the weight of the initial estimation accordingly during the fusing stage.
+The raw range data retrieved from the depth sensors are generally noisy. The borders and dark regions of the tag produce unreliable range data and artifacts due to a weakness of our depth sensor (time of flight sensor from Kinect V2). Therefore, we first filter the data by removing points too far from the median before fitting the plane. Nevertheless, the remaining points could have a large variance depending on the lighting condition and the magnitude of the in-plane rotation. The accuracy of the plane fit and initial pose estimation is directly affected by the noise level of data. We will characterize the uncertainty of the plane fit and adjust the weight of the depth pose estimation accordingly during the fusing stage.
 
-In implementation, we used a Bayesian plane fitting algorithm described in \citep{pathak2010uncertainty} which computes the Hessian Normal parameters $[\boldsymbol{\hat{n}}, d]$ of a plane for noisy range data through optimizing
+In implementation, we used a Bayesian plane fitting algorithm described in~\citep{pathak2010uncertainty} which computes the Hessian Normal parameters $[\boldsymbol{\hat{n}}, d]$ of a plane for noisy range data through optimizing
 \begin{IEEEeqnarray}{c}
 \min _{\boldsymbol{\hat{n}}, d} \sum_{j=1}^{N} 
 	\frac{(p_j(\boldsymbol{\hat{n}} \cdot \boldsymbol{\hat{m}_j}) -d)^2}
@@ -24,7 +24,7 @@ The algorithm in the paper assumes a radial Gaussian noise in the range data $p_
 \IEEEeqnarraynumspace
 \label{eq:gaussian_noise}
 \end{IEEEeqnarray}
-The coefficient $k > 0$ is an estimated value obtained from sensor calibration. In our implementation, we obtained $k$ by using the Kinect V2 model obtained from [Kinect Noise Model paper]. 
+The coefficient $k > 0$ is an estimated value obtained from sensor calibration. In our implementation, we obtained $k$ by using the Kinect V2 model obtained from \citep{nguyen2012modeling}. 
 
 An important result we used from \citep{pathak2010uncertainty} is the covariance matrix for the plane-parameters. The covariance is obtained by taking the \textit{Moore-Penrose generalized inverse} of Hessian matrix computed from the Lagrangian. It characterizes the uncertainty of the plane fit and implicitly measures the relative accuracy of the depth data.
 
@@ -61,7 +61,7 @@ An alternative is to use all 4 detected corners as 4 pairs of point corresponden
 \IEEEeqnarraynumspace
 \label{eq:rigid_body}
 \end{IEEEeqnarray}
-There are numerous approaches to solve Eq. \ref{eq:rigid_body} described in \citep{eggert1997estimating}. Since we have very few correspondences and they are assumed to be correct, it can be computed quickly using SVD:
+There are numerous approaches to solve Eq. \ref{eq:rigid_body} described in~\citep{eggert1997estimating}. Since we have very few correspondences and they are assumed to be correct, it can be computed efficiently using SVD:
 \begin{IEEEeqnarray}{rCl}
 & \bar{p} = \frac{1}{N} \sum_{i=1}^{N} p_i \qquad p_{ci} = p_i - \bar{p} \\
 & \bar{q} = \frac{1}{N} \sum_{i=1}^{N} q_i \qquad q_{ci} = q_i - \bar{q} 
@@ -71,27 +71,27 @@ p_{c}^{\top}q_c &= U\Sigma V^\top \\
 R & = VU^\top\\
 \boldsymbol{t} & = \bar{q} - R\bar{p}
 \end{IEEEeqnarray}
-Here, $R$ and $t$ are the corresponding rotation and translation components of the the transformation. The above approach minimizes the least square error of the transformation and it is robust to small errors in the correspondences. The resulting pose obtained from the range data, although not accurate, provide a good approximation for the true pose. 
+Here, $R$ and $\boldsymbol{t}$ are the corresponding rotation and translation components of the the transformation. The above approach minimizes the least square error of the transformation and it is robust to small errors in the correspondences. The resulting pose obtained from the range data, although not accurate, provide a good approximation for the true pose. 
 
 \subsection{Pose Refinement}
 
-Lastly, the pose is refined by minimizing the reprojection error using the initial pose estimated from the previous step. The camera is assumed to be calibrated and the camera projection model $K$ is known. We denote $R^*$ and $\boldsymbol{t^{*}}$ to be the optimal pose in the constrained optimization function
+Lastly, the pose is refined by minimizing the reprojection error in  Eq.\ref{eq:reprojection} using the initial pose estimated from the previous step. The camera is assumed to be calibrated and the camera projection model $K$ is known. Here, $R^*$ and $\boldsymbol{t^{*}}$ are the optimal pose in the constrained optimization function
 \begin{IEEEeqnarray*}{rCl}
 [R^*, \boldsymbol{t^{*}}] & = & \argmin _{R^*, \boldsymbol{t^{*}}} \sum_i^n \| (K [R^* | \boldsymbol{t^{*}}]) \boldsymbol{p_i} - \boldsymbol{y_i}\| ^2 \IEEEyesnumber \\
+\label{eq:reprojection}
 R^* & = & R (\Delta R) \IEEEyesnumber \\ 
 \boldsymbol{t^{*}} & = & \boldsymbol{t} + R (\Delta \boldsymbol{t}) \IEEEyesnumber \\
-\text{subject to:} \\ 
-\Delta R & < & \Gamma _R \IEEEyesnumber \\
-\Delta \boldsymbol{t} & < & \Gamma _t \IEEEyesnumber \\
+\noindent \text{subject to:} \\ 
+\Delta R & < & \Gamma_R , \; \Delta \boldsymbol{t}  <  \Gamma_t \IEEEyesnumber \\
 \label{eq:refinement}
 \end{IEEEeqnarray*}
 
-Intuitively, the most optimal pose is the one with minimal reprojection error in the RGB space and align with the plane in the depth space. Therefore, the goal of the optimization is to find the local minimum closest to the initial estimation within allowable region $\Gamma$ as illustrated with Figure \ref{fig:optimization}. The key challenge is to determine the constrained region $\Gamma_R$ and $\Gamma_t$ such that it include a locally optimal pose and exclude the ambiguous pose. In most cases where the depth plane yields a good fit, this region should be small because the optimal pose is close to the initial estimate. When the depth sensor is noisy, the $\Gamma$ increases since the initial estimate might be far off. Thus, the constrained region $\Gamma$ is defined by the uncertainty in the initial estimate and it is characterized by the covariance of the plane parameters. In implementation, we used a trust-region optimization algorithm to bound the constraints. The scaling parameters for the covariance is empirically test to obtain the best results for our robot. 
+Intuitively, the most optimal pose is the one with minimal reprojection error in the RGB space and align with the plane in the depth space. Therefore, the goal of the optimization is to find the local minimum closest to the initial estimation within allowable region $\Gamma$ as illustrated with Figure \ref{fig:optimization}. The key challenge is to determine the constrained region $\Gamma_R$ and $\Gamma_t$ such that it include a locally optimal pose and exclude the ambiguous pose. In most cases where the depth plane yields a good fit, this region should be small because the optimal pose is close to the initial estimate. When the depth sensor is noisy, the $\Gamma$ increases since the initial estimate might be far off. Thus, the constrained region $\Gamma$ is defined by the uncertainty in the initial estimate and it is characterized by the covariance of the plane parameters. In implementation, we used a trust-region optimization algorithm to bound the constraints. The scaling parameters for the covariance is empirically tested to obtain the best results for our robot. 
 
 
-\begin{figure}[h]
+\begin{figure}
 \centering
-\includegraphics[width=\columnwidth, height=130px]{figs/viewing_angle_fig2}
+\includegraphics[width=220px, height=130px]{figs/viewing_angle_fig2}
 \caption{Viewing Angle vs Error Percentage under different simulated noise level. The new RGBD based algorithm can resist noise in the RGB image and it vastly outperforms the original algorithm.}
 \label{fig:viewing_result}
 \end{figure}

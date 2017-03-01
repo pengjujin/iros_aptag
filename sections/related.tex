@@ -11,7 +11,7 @@
 \caption{Different types of popular fiducial tags. ARToolkit, ARTags, and AprilTags are square tags with black borders. RUNE-tags and Intersense use different circle features as landmarks}
 \label{fig:tags}
 \end{figure}
-	Obtaining highly accurate pose estimation has been an important research area in robotics. Numerous algorithms rely only on RGB or gray scale images. Solving the projection geometry of some detected features and then minimize the reprojection error of the features in the image space \citep{grest2009comparison}.  Similarly, methods such as Iterative Closet Point \citep{besl1992method} were developed to solve the pose estimation problem using range data by minimizing the Euclidean distance between the model and the depth data. Recently, some approaches propose to enhance the accuracy of traditional tracking algorithms by fusing RGB and depth data in various problems using extended Kalman filters \citep{gedik2015rgbd, assa2014robust}. Compared to the single-sensor approaches, algorithms utilizing RGBD data are more accurate and perform well in noisy situations where other approaches fail. In this paper, we take a similar approach to improve the pose estimation in fiducial markers.
+	Obtaining highly accurate pose estimation has been an important research area in robotics. Numerous algorithms rely only on RGB or gray scale images. Solving the projection geometry of some detected features and then minimize the reprojection error of the features in the image space~\citep{grest2009comparison}.  Similarly, methods such as Iterative Closet Point \citep{besl1992method} were developed to solve the pose estimation problem using range data by minimizing the Euclidean distance between the model and the depth data. Recently, some approaches propose to enhance the accuracy of traditional tracking algorithms by fusing RGB and depth data in various problems using extended Kalman filters \citep{gedik2015rgbd, assa2014robust}. Compared to the single-sensor approaches, algorithms utilizing RGBD data are more accurate and perform well in noisy situations where other approaches fail. In this paper, we take a similar approach to improve the pose estimation in fiducial markers from a single frame.
 	
 	Fiducial markers solve pose estimation by exploiting easily detectable features in the RGB space. There is an abundance of unique tag designs, most of them carry easily recognizable yet precise binary patterns in the inner region to encode information. There are two types of common tags: circular tags and square tags seen in Figure \ref{fig:tags}. 
 	
@@ -19,7 +19,7 @@
 	
 \begin{figure}
 \centering
-\includegraphics[width=\columnwidth]{figs/perspective_fig}
+\includegraphics[width=200px, height=130px]{figs/perspective_fig}
 \caption{The ambiguity effect is illustrated with two rendered cubes in the perspective view. The two cubes are rotated such that two faces are interlaced. The red square is a simulated projection of a square tag. The red circular regions denote the region of potential corner detections in a noisy scene. The pose of the red square can converge to either one of the two faces.}
 \label{fig:cube}
 \end{figure}
